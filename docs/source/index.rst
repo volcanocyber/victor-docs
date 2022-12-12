@@ -1,17 +1,16 @@
-Welcome to Lumache's documentation!
+Welcome to the VICTOR documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**VICTOR** is a JupyterHub based platform for volcano science modeling and data analysis.
+All of our infrastructure and modeling code is open-source and/or publicly available. We hope for 
+VICTOR to function as a continously evolving service, fostering novel mathematical models and encouraging further
+data sharing among the volcanology community and beyond.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+For more detailed information, check out the :doc:`usage` section.
 
 .. note::
 
-   This project is under active development.
+   This project is under active development and is subject to changes.
 
 Contents
 --------
@@ -19,4 +18,3 @@ Contents
 .. toctree::
 
    usage
-   api
