@@ -71,7 +71,7 @@ or create a pull request for specific changes/updates.
 
 .. _our Github repository: https://github.com/volcanocyber/VICTOR-notebook
 
-.. code-block:: console
+.. .. code-block:: console
 
-   (.venv) $ pip install lumache
+..    (.venv) $ pip install lumache
 

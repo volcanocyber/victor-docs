@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+The VICTOR Project - Read the Docs
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This is the VICTOR volcanology hub repo for documentation, usage, and the like.
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+For additions, questions, or concerns, please email krasnoff@ldeo.columbia.edu.
