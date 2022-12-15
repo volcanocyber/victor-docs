@@ -1,4 +1,4 @@
-Usage
+Models
 =====
 
 Models Overview
@@ -19,6 +19,7 @@ common actions for the hub, such as file I/O and cross-library visualization are
 .. note:: Due to the varied languages and file requirements, additional files neccesary for the models may be included in
     the generated folders. Intended output files will be clearly specified by both the workflow and documentation.
 
+.. _IMEX Citations:
 
 IMEX
 ----------
@@ -44,10 +45,8 @@ IMEX outputs data at every dt chosen by the user, so in order to view data at a 
 ran without input to give a detailed output of both temperature and thickness of the flow at a given time. Additionally, seperate netCDF files 
 containing time series data for the temperature and depth are both supplied as output, along with a JPG of the figure.
 
-.. _IMEX Citations:
 
 **References:**
-
 
 Elisa Biaioli's thesis: https://dx.doi.org/10.15167/biagioli-elisa_phd2021-10-27
 
@@ -55,6 +54,7 @@ E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow wa
 
 M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019.
 
+.. _Molasses Citations:
 
 MOLASSES
 ------------
@@ -67,7 +67,6 @@ the rest of the model can run without input. If desired, the zoom level can be s
 the overall DEM with the flow overlayed. The workflow will output a well formatted CSV named ``flow.csv`` for the user, as well as 
 a JPG of the final figure.
 
-.. _Molasses Citations:
 
 **References:**
 
