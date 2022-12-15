@@ -46,22 +46,16 @@ Citations and References
 Below are citations and related works used to create this project. To add additional citations or for clarification, contact victor@ldeo.columbia.edu
 
 **IMEX-Lava**
-Elisa Biaioli's thesis: https://dx.doi.org/10.15167/biagioli-elisa_phd2021-10-27
 
-E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow water model for viscous fluids and positivity preserving numerical approximation. Applied Mathematical Modeling, 94:482–505, 2021. doi: 10.1016/j.apm.2020.12.036.
-
-M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019.
-
-**MrLavaLoba**
-
-M. de' Michieli Vitturi and S. Tarquini. MrLavaLoba: A new probabilistic model for the simulation of lava flows as a settling process,
-Journal of Volcanology and Geothermal Research, Volume 349, 2018, Pages 323-334, ISSN 0377-0273, https://doi.org/10.1016/j.jvolgeores.2017.11.016.
+See :ref:`IMEX Citations` here.
 
 **Molasses**
 
-Connor, L. J., Connor, C. B., Meliksetian, K., & Savov, I. (2012) Probabilistic approach to modeling lava flow inundation: a lava flow hazard assessment for a nuclear facility in Armenia. Journal of Applied Volcanology (1):3. DOI 10.1186/2191-5040-1-3
+See :ref:`Molasses Citations` here.
 
-Kubanek, J., Richardson, J. A., Charbonnier, S. J., & Connor, L. J. (2015) Lava flow mapping and volume calculations for the 2012–2013 Tolbachik, Kamchatka, fissure eruption using bistatic TanDEM-X InSAR. Bulletin of Volcanology 77(12):106. DOI 10.1007/s00445-015-0989-9 
+**MrLavaLoba**
+
+See :ref:`MrLavaLoba Citations` here.
 
 Contributing Models and Hub Additions
 -------------------------------------
@@ -70,8 +64,3 @@ as well as a brief explanation. For additions to the hub itself, please refer to
 or create a pull request for specific changes/updates.  
 
 .. _our Github repository: https://github.com/volcanocyber/VICTOR-notebook
-
-.. .. code-block:: console
-
-..    (.venv) $ pip install lumache
-

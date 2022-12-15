@@ -6,7 +6,10 @@ All of our infrastructure and modeling code is open-source and/or publicly avail
 VICTOR to function as a continously evolving service, fostering novel mathematical models and encouraging further
 data sharing among the volcanology community and beyond.
 
-For more detailed information, check out the :doc:`usage` section.
+For more detailed information on the project overall, check out the :doc:`usage` section.
+
+For details on running each individual model, please go to the :doc:`models` section.
+
 
 .. note::
 
@@ -18,3 +21,4 @@ Contents
 .. toctree::
 
    usage
+   models
