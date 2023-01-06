@@ -45,6 +45,14 @@ Citations and References
 ------------------------
 Below are citations and related works used to create this project. To add additional citations or for clarification, contact victor@ldeo.columbia.edu
 
+**Conflow**
+
+See :ref:`Conflow Citations` here.
+
+**Hazmap**
+
+See :ref:`Hazmap Citations` here.
+
 **IMEX-Lava**
 
 See :ref:`IMEX Citations` here.
@@ -56,6 +64,14 @@ See :ref:`Molasses Citations` here.
 **MrLavaLoba**
 
 See :ref:`MrLavaLoba Citations` here.
+
+**pyFLOWGO**
+
+See :ref:`pyFLOWGO Citations` here.
+
+**Tephra2**
+
+See :ref:`Tephra2 Citations` here.
 
 Contributing Models and Hub Additions
 -------------------------------------
