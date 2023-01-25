@@ -53,6 +53,10 @@ See :ref:`Conflow Citations` here.
 
 See :ref:`Hazmap Citations` here.
 
+**HYSPLIT**
+
+See :ref:`Hysplit Citations` here.
+
 **IMEX-Lava**
 
 See :ref:`IMEX Citations` here.
@@ -72,6 +76,10 @@ See :ref:`pyFLOWGO Citations` here.
 **Tephra2**
 
 See :ref:`Tephra2 Citations` here.
+
+**Titan2D**
+
+See :ref:`Titan2D Citations` here.
 
 Contributing Models and Hub Additions
 -------------------------------------

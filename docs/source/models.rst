@@ -75,6 +75,32 @@ Macedonio et al., 2005 G. Macedonio, A. Costa and A. Longo, A computer model for
 
 Antonio Costa (2013), "Hazmap," https://theghub.org/resources/hazmap.
 
+.. _Hysplit Citations:
+
+Hysplit
+----------
+
+The Hybrid Single-Particle Lagrangian Integrated Trajectory model (HYSPLIT)[1] is a computer model created by NOAA that is used to compute air parcel trajectories to determine how far and in what direction a parcel of air, and subsequently air pollutants, will travel.
+
+VICTOR contains the entirety of Hysplit, though our workflow focuses on modeling ash deposition and concentration.
+First, the user is asked to specify the particle distribution configuration, vertical and horizontal turbulence models, as well as the output file name.
+Equally as important in the first cell is the number of particles per cycle, as well as the maximum particles released.
+
+The second input cell requires the user to enter the start date, latitude/longitude of the volcano and the ash column, and the maximum runtime of the model.
+It also requires an input data grid. For each particle, an identifier, along with emission rate, hours of emission, and start time are necessary.
+
+The final input cell has the user concentration grid information, along with sampling interval timing, and then a swath of particle information including,
+but not limited to, the density, diameter, deposition velocity and decay rate if it is an unstable molecule.
+
+Upon completing the inputs, the user will run the model and be given a choice of timesteps to pick from. After this choice, every other cell can be run. Three images will be the result.
+First, the workflow uses a built-in visualizer from Hysplit. Next, it uses the matplotlib library. Finally, we use Bokeh for and interactivate and more data-rich experience.
+
+**References:**
+
+Stein, A.F., Draxler, R.R, Rolph, G.D., Stunder, B.J.B., Cohen, M.D., and Ngan, F., (2015). NOAA's HYSPLIT atmospheric transport and dispersion modeling system, Bull. Amer. Meteor. Soc., 96, 2059-2077, http://dx.doi.org/10.1175/BAMS-D-14-00110.
+
+Rolph, G., Stein, A., and Stunder, B., (2017). Real-time Environmental Applications and Display sYstem: READY. Environmental Modelling & Software, 95, 210-228, https://doi.org/10.1016/j.envsoft.2017.06.025this link opens in a new window. ( http://www.sciencedirect.com/science/article/pii/S1364815217302360)
+
 .. _IMEX Citations:
 
 IMEX
@@ -96,7 +122,7 @@ generating from a collapsing volume. Further documentation will be provided in t
 All values after the DEM check can be kept as is for a reasonable estimate. The three cells before are the only places that must be changed in reference 
 to the DEM to function properly.
 
-Subsequent cells write out the config files and run the model. THe only other place input is neccesary is a one line cell with the ``step`` variable.
+Subsequent cells write out the config files and run the model. The only other place input is neccesary is a one line cell with the ``step`` variable.
 IMEX outputs data at every dt chosen by the user, so in order to view data at a given timestamp, you **must** choose a step. All subsequent cells can
 ran without input to give a detailed output of both temperature and thickness of the flow at a given time. Additionally, seperate netCDF files 
 containing time series data for the temperature and depth are both supplied as output, along with a JPG of the figure.
@@ -135,7 +161,7 @@ Kubanek, J., Richardson, J. A., Charbonnier, S. J., & Connor, L. J. (2015) Lava 
 MrLavaLoba
 ------------
 
-MrLavaLoba is a stochastic model for simulating lava flows, written in Python. THe workflow for this model begins with a large
+MrLavaLoba is a stochastic model for simulating lava flows, written in Python. The workflow for this model begins with a large
 amount of text, explaining input parameters in detail. After neccesary libraries are imported, all parameters are in the next cell.
 A DEM sanity check follows, continuing on to write out the input files and run the model. A convenient progress bar will show the 
 remaining time for model calculations. MrLavaLoba outputs snapshows at a given *dt* interval, so the user must pick a step to visualize.
@@ -192,11 +218,29 @@ resulting in an isomass tricontour of the tephra dispersion. The VICTOR team is 
 Bonadonna, C., Connor, C. B., Houghton, B. F., Connor, L., Byrne, M., Laing, A., and Hincks, T. K. (2005) Probabilistic modeling of tephra dispersal: 
 Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand, Journal of Geophysical Research: Solid Earth 110(B3). DOI 10.1029/2003JB002896
 
-Connor, Laura J., and Charles B. Connor (2006) Inversion is the key to dispersion: understanding eruption dynamics by
- inverting tephra fallout In H. M. Mader, S. G. Coles, C. B. Connor & L. J. Connor (Eds.), Statistics in Volcanology, Geological Society of London Special Publications 231. DOI 10.1144/IAVCEI001.18
+Connor, Laura J., and Charles B. Connor (2006) Inversion is the key to dispersion: understanding eruption dynamics by inverting tephra fallout In H. M. Mader, S. G. Coles, C. B. Connor & L. J. Connor (Eds.), Statistics in Volcanology, Geological Society of London Special Publications 231. DOI 10.1144/IAVCEI001.18
 
-Biass, Sebastien, Bagheri, Gholamhossein, Aeberhard, William H., and Bonadonna, Costanza (2014) TError: 
-towards a better quantification of the uncertainty propagated during the characterization of tephra deposits, Statistics in Volcanology 1(2):1-27. DOI 10.5038/2163-338X.1.2
+Biass, Sebastien, Bagheri, Gholamhossein, Aeberhard, William H., and Bonadonna, Costanza (2014) TError:  towards a better quantification of the uncertainty propagated during the characterization of tephra deposits, Statistics in Volcanology 1(2):1-27. DOI 10.5038/2163-338X.1.2
 
-Biass, S., Bonadonna, C., Connor, L., and Connor, C. (2016) TephraProb: a Matlab package for probabilistic hazard
- assessments of tephra fallout, Journal of Applied Volcanology 5(1):10. DOI 10.1186/s13617-016-0050-5 
+Biass, S., Bonadonna, C., Connor, L., and Connor, C. (2016) TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout, Journal of Applied Volcanology 5(1):10. DOI 10.1186/s13617-016-0050-5 
+
+
+.. _Titan2D Citations:
+
+
+Titan2D
+----------
+
+TITAN2D is a geoflow simulation software application, specifically used for granular flows. As a deterministic model,
+it requires a large array of parameters to be properly configured.
+
+To begin, the user enters information for DEM format, the DEM itself, as well as some fundamental constants. This first section also includes iteration limits, and output intervals.
+Next, numeric parameters are required. The user can choose to toggle adaptive mesh refinements for more accurate calculations at each timestep, along with the size of the initial pile and
+the order of PDE to solve. Finally, the user must specify the material model and associated constants. We select the Coloumb model by default, though there are a total of four options.
+
+Numerous optional additions can be made, including extra points of origin for lava, flux locations, and discharge planes for measuring flow over an are are all
+toggleable options for the user. After this, the user can run another 4 cells and choose a timestamp once the model finishes running. All following cells can then be
+ run and result in a very detailed snapshot of the lava depth at the moment specified.
+
+**References:**
+Patra, A., Bevilacqua, A., Akhavan-Safaei, A., Pitman, E. B., Bursik, M., &amp; Hyman, D. (2020). Comparative analysis of the structures and outcomes of geophysical flow models and modeling assumptions using uncertainty quantification. Frontiers in Earth Science, 8. https://doi.org/10.3389/feart.2020.00275 
