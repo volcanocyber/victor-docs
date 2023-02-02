@@ -10,7 +10,7 @@ To gain access to VICTOR, you must first register. Currently, we are authenticat
 are required to possess an account. To register, please visit the VICTOR website_ and press the register button in the top right.
 This will direct you to a form where you can provide the neccesary information.
 
-.. _website: https://localhost:9999
+.. _website: https://victor.ldeo.columia.edu
 
 .. _runmodels:
 
