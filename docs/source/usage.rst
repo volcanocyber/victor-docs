@@ -7,7 +7,7 @@ Registration
 ------------
 
 To gain access to VICTOR, you must first register. Currently, we are authenticating users through Github, and thus all users 
-are required to possess an account. To register, please visit the VICTOR website_ and press the register button in the top right.
+are required to possess an account. To register, please visit the VICTOR website_ and click on the *Sign Up* button on the right of the menu.
 This will direct you to a form where you can provide the neccesary information.
 
 .. _website: https://victor.ldeo.columbia.edu
@@ -16,13 +16,28 @@ This will direct you to a form where you can provide the neccesary information.
 
 Once you are able to access the hub, you will see a screen very similar to this:
 
-.. image:: ./default.png
+.. image:: ./victor.png
+
+The Launcher
+-------------
+The first screen you will be met with is the launcher, providing an variety of environments to utilize.
+The first row of buttons is comprised of highly interactive Jupyter notebooks, as well as the desktop application.
+The VICTOR team advises using only the ``[conda env: notebook]`` tabs, as this is the environment that includes all the
+neccesary scientific packages for utilizing and visualizing models.
+
+The second row of buttons opens consoles, a simplified interactive environment where you can enter
+lines of code and run them, though not able to embed images or renderings such as matplotlib.
+
+The final row of buttons provides quick access to static files in various languages, as well as for a simple text file.
+Additionally, access to a bash terminal is accessible here, allowing for advanced users to maximize productivity in this environment.
+
+
 
 Run Models
 ------------
 
 To run models, there are a few simple steps. First, navigate to the ``shared`` folder. You can either run the the ``*****_setup.sh``
- files directly, or copy one, either through manual selection (right click + copy) with the mouse, or through the terminal with ``cp shared/*****_setup.sh .`` when you are in the home directory.
+files directly, or copy one, either through manual selection (right click + copy) with the mouse, or through the terminal with ``cp shared/*****_setup.sh .`` when you are in the home directory.
 
 .. note::
 
@@ -40,6 +55,14 @@ However, DEMs are not automatically included. Users then have 4 primary options:
 
 At this point, users can go through the first few cells immediately succeeding the import statement, inputting parameters as needed.
 Thorough descriptions of each parameter are included. Once finished, the user can simply press the fast forward symbol to run all cells, or ``shift + enter/return`` to run each cell individually.
+
+Accessing The Virtual Desktop
+---------------------------
+Upon clicking the desktop button on the launcher, another tab will open, displaying a screen as seen below. From here, you
+can access a fully featured QGIS installation, with many other programs scheduled to be added as well. The file system is connected to
+your personal files, and a web browser is also available for your convenience. 
+
+.. image:: ./desktop.png
 
 Citations and References
 ------------------------

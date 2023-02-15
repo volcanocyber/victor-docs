@@ -30,7 +30,7 @@ on the model, for compatibility's sake.
 VICTOR offers three sets of options for visualization. The first is through any of the dozen libraries included in
 the built-in conda environment. Second is the custom library ``victor.py`` for sharp and accurate
 plotting through a handful of reuable functions. For the most versastile work, a virtual desktop with
-QGIS and Paraview (and likely more programs in the future) reside for a fully featured experience.
+QGIS resides for a fully featured experience.
 
 .. _Conflow Citations:
 
@@ -240,7 +240,7 @@ the order of PDE to solve. Finally, the user must specify the material model and
 
 Numerous optional additions can be made, including extra points of origin for lava, flux locations, and discharge planes for measuring flow over an are are all
 toggleable options for the user. After this, the user can run another 4 cells and choose a timestamp once the model finishes running. All following cells can then be
- run and result in a very detailed snapshot of the lava depth at the moment specified.
+run and result in a very detailed snapshot of the lava depth at the moment specified.
 
 **References:**
 Patra, A., Bevilacqua, A., Akhavan-Safaei, A., Pitman, E. B., Bursik, M., &amp; Hyman, D. (2020). Comparative analysis of the structures and outcomes of geophysical flow models and modeling assumptions using uncertainty quantification. Frontiers in Earth Science, 8. https://doi.org/10.3389/feart.2020.00275 
