@@ -1,4 +1,4 @@
-victor.py
+Victor Library
 =========
 
 Victor Library Overview
@@ -8,30 +8,32 @@ The VICTOR library is, at its core, a collection of convenient custom functions 
 downloading, accessing, manipulating, and visualizing datum that are vital to a volcano scientist's
 research. As more models and wider functionality are added, the VICTOR library will grow.
 
+Plotting Model Outputs
+-----------------------
 .. code-block:: python
     
-    plot_dem(dem, fig, ax, coords=None)
+    def plot_dem(dem, fig, ax, coords=None)
 
 ``dem``: The relative or absolute filepath to DEM. Must be an ascii shapefile or GeoTIFF format, as georeferencing is necessary for proper formatting.
 
-``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside.
+``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside. Example use case: ``fig = plt.figure(figsize=(12, 8))``
 
-``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like.
+``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like. ``ax = plt.axes(projection=ccrs.epsg(32628))``
 
 ``coords``: Optional parameter to add coordinates. If adding more than one set,
 provide in [[x_1,y_1],[x_2,y_2],...] format in multidimensional array.
 
 .. code-block:: python
     
-    plot_flow(dem, flow, fig, ax, coords,zoom=True,model=None, label="Thickness of residual (m)"):
+    def plot_flow(dem, flow, fig, ax, coords,zoom=True,model=None, label="Thickness of residual (m)"):
 
 ``dem``: The relative or absolute filepath to DEM. Must be an ASCII shapefile or GeoTIFF format, as georeferencing is necessary for proper formatting.
 
 ``flow``: The relative or absolute file path to the flow data. Can be ASCII, geoTIFF, or csv formatted (without headers).
 
-``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside.
+``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside. Example use case: ``fig = plt.figure(figsize=(12, 8))``
 
-``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like.
+``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like. ``ax = plt.axes(projection=ccrs.epsg(32628))``
 
 ``coords``: Optional parameter to add coordinates. If adding more than one set,
 provide in [[x_1,y_1],[x_2,y_2],...] format in multidimensional array.
@@ -51,9 +53,9 @@ variation in formatting.
 
 ``flow``: Must be a Pandas dataframe.
 
-``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside.
+``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside. Example use case: ``fig = plt.figure(figsize=(12, 8))``
 
-``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like.
+``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like. ``ax = plt.axes(projection=ccrs.epsg(32628))``
 
 ``coords``: Optional parameter to add coordinates. If adding more than one set,
 provide in [[x_1,y_1],[x_2,y_2],...] format in multidimensional array.
@@ -62,13 +64,13 @@ provide in [[x_1,y_1],[x_2,y_2],...] format in multidimensional array.
 
 .. code-block:: python
 
-    make_titan_gif(dem, fig, ax, coords, max_iter, diter, gif_name):
+    def make_titan_gif(dem, fig, ax, coords, max_iter, diter, gif_name):
 
 ``dem``: The relative or absolute filepath to DEM. Must be in geoTIFF format, as georeferencing is necessary for proper formatting.
 
-``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside.
+``fig``: A ``matplotlib.figure`` object. This is the complete plot, both within the axes and outside. Example use case: ``fig = plt.figure(figsize=(12, 8))``
 
-``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like.
+``ax``: A ``matplotlib.axes`` object. This is the area concerning the data itself, as well as labels, titles, and the like. ``ax = plt.axes(projection=ccrs.epsg(32628))``
 
 ``coords``: Optional parameter to add coordinates. If adding more than one set,
 provide in [[x_1,y_1],[x_2,y_2],...] format in multidimensional array.
@@ -78,6 +80,9 @@ provide in [[x_1,y_1],[x_2,y_2],...] format in multidimensional array.
 ``diter``: The number of iterations between outputs, set by the user in the Titan2D input file.
 
 ``gif_name``: The name used to save the gif to your current directory.
+
+Upload/Download from the Cloud
+------------------------------
 
 .. code-block:: python
 
@@ -162,6 +167,9 @@ for information on how to get your connection string.
 ``blob_name``: The name you would like the uploaded file to have in Azure storage.
 
 ``local_file_name``: The name (and path if not in the current directory) of the local file that should be uploaded.
+
+Download DEMs
+--------------
 
 .. code-block:: python
 

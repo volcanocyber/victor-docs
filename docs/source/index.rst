@@ -10,7 +10,6 @@ For more detailed information on the project overall, check out the :doc:`usage`
 
 For details on running each individual model, please go to the :doc:`models` section.
 
-
 .. note::
 
    This project is under active development and is subject to changes.
