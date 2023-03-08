@@ -52,6 +52,33 @@ but the most gracefully formatted file will always be ``Conflow.csv``, output to
 
 Silvia Campagnola; Claudia Romano; Larry G Mastin; Alessandro Vona (2016), "Confort 15 (Conflow improvement)," https://theghub.org/resources/3743.
 
+.. _Disgas Citations:
+
+Disgas
+--------
+DISGAS (passive DISpersion of GASes and particles) is a Eulerian model for passive dispersion of diluted gas and fine dust particles.
+Turbulent diffusion is based on the K-theory, and the wind field can be evaluated assuming either a wind profile based on the similarity theory or using
+a terrain-following mass consistent wind model. The model can be used to forecast concentration of gas (or dust) over complex terrains.
+
+The DISGAS workflow begins with parameters relating to the date of the simulation, as well as its duration, and options concerning if it was continuing from an existing run.
+Next, one must enter data about the grid and general topography. The grid information is required, though the exact elevation can either be sourced from a file or simplified into a slope.
+The third cell asks the user how they want to treat the model. When treated as a gas with no settling velocity, extra parameters are not needed.
+However, when treated as a set of particles, the physical properties and mathematical methods to calculate the settling velocity.
+Then, the user must specify the vertical and horizontal wind turbulence models as well as the soil roughness model and diffusion coefficients.
+The final input cell requests the user to input file paths for supplemental input data in addition to output intervals and the option to output directional velocities and concentration.
+
+The next two cells format the input and run the model.
+Depending on the number of wind data points provided, multiple layers will be output. The user must then specify a layer,
+and can then run the following cell to output a set of plots over the timespan.
+
+**References**
+
+\A. Costa, G. Macedonio, Chiodini G., 2005. Numerical model of gas dispersion emitted from volcanic sources. Annals of Geophysics, Vol. 48: 805-815.
+
+Granieri D., Costa A., Macedonio G., Chiodini G., Bisson M. (2013) Carbon dioxide in the city of Naples: contribution and effects of the volcanic source, J. Volcanol. Geotherm. Res., Vol. 260: 52-61, doi: 10.1016/j.jvolgeores.2013.05.003
+
+Costa A., Macedonio G. (2016) DISGAS: A model for passive DISpersion of GAS, Rapporti tecnici INGV, N. 332, Istituto Nazionale Di Geofisica e Vulcanologia, Italy
+
 .. _Hazmap Citations:
 
 Hazmap
@@ -227,7 +254,6 @@ Biass, S., Bonadonna, C., Connor, L., and Connor, C. (2016) TephraProb: a Matlab
 
 .. _Titan2D Citations:
 
-
 Titan2D
 ----------
 
@@ -244,3 +270,36 @@ run and result in a very detailed snapshot of the lava depth at the moment speci
 
 **References:**
 Patra, A., Bevilacqua, A., Akhavan-Safaei, A., Pitman, E. B., Bursik, M., &amp; Hyman, D. (2020). Comparative analysis of the structures and outcomes of geophysical flow models and modeling assumptions using uncertainty quantification. Frontiers in Earth Science, 8. https://doi.org/10.3389/feart.2020.00275 
+
+.. _Twodee Citations:
+
+TWODEE-2
+----------
+
+TWODEE is a code for dispersion of heavy gases based on the solution of a shallow water equations system for fluid depth, depth-averaged horizontal velocities and depth-averaged fluid density. 
+The workflow begins with a cell for the user to set parameters related to the date, runtime, and name of the current simulation.
+Next, the user must input spacing values and UTM values for the topography. If a file is provided, elevation is sourced from it
+though if not, a generalized slope is required from user entered values. The following two cells require
+numerical terms, including the densities of the two gasses being compared and many environmental and entrainment coefficients as well as physical constants.
+Subsequently, the user is asked to enter some location data for the meteorology, or more aptly the wind.
+The second to last configuration cell simply asks the user to enter paths to various files, depending on the mode the user chose.
+If not required, the cell can be left blank or as-is from the template. Finally, output parameters can be withheld or added as needed,
+allowing for highly flexible output files. 
+
+The next two cells can be run without any change, as they are creating a formatted input file and running the model. The following two cells open the result file and give a brief description of the possible values to display.
+These values range from wind velocity and cloud thickness to gas concentration and altitude of critical concentration.
+Currently, the user must then enter the set of values they want to display, and a lower bound. The bound allows for more accurate visualizations due to negligable low value data points.
+The final cell can be run as is, and will result in a sharp, detailed plot of the chosen data over the topography.
+
+**References**
+Hankin, R., Britter, R. (1999a). TWODEE: the Health and Safety Laboratory's shallow layer model for heavy gas dispersion. Part 1. Mathematical basis and physical assumptions. J. Hazard. Mater. A66, 211-226.
+
+Hankin, R., Britter, R. (1999b). TWODEE: the Health and Safety Laboratory's shallow layer model for heavy gas dispersion. Part 2. Outline and validation of the computational scheme. J. Hazard. Mater. A66, 227-237.
+
+Hankin, R., Britter, R. (1999c). TWODEE: the Health and Safety Laboratory's shallow layer model for heavy gas dispersion. Part 3. Experimental validation (Thorney island). J. Hazard. Mater. A66, 237-261.
+
+Costa A., Chiodini G., Granieri D., Folch A., Hankin R.K.S., Caliro S., Cardellini C., Avino R. (2008). A shallow layer model for heavy gas dispersion from natural sources: application and hazard assessment at Caldara di Manziana, Italy., Geochem. Geophys. Geosyst., 9, Q03002, doi: 10.1029/2007GC001762.
+
+Folch A., Costa A., Hankin R.K.S., 2009. TWODEE-2: A shallow layer model for dense gas dispersion on complex topography, Comput. Geosci., doi:10.1016/j.cageo.2007.12.017
+
+Chiodini G., Granieri D., Avino R., Caliro S., Costa A., Minopoli C., Vilardo G., (2010) Non-volcanic CO2 Earth degassing: The case of Mefite di Ansanto (Southern Apennines), Italy, Geophys. Res. Lett., Vol. 37, L11303, doi: 10.1029/2010GL042858
