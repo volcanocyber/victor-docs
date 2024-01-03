@@ -163,6 +163,37 @@ E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow wa
 
 M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019.
 
+.. _Laharz Citations:
+
+LAHARZ
+---------
+
+LaharZ is an open source tool which can be used to model various flow hazards, developed by Keith Blair
+most significantly lahars. Its inputs are a digital elevation model (DEM), a stream file 
+(which defines stream thalwegs) and a flow direction file. From these inputs, 
+LaharZ creates an energy cone based on a height/length (H/L) ration; a set of initiation points 
+(which can be edited) and a set of flow files based on a range of volumes.
+
+The stream and flow files can be created on any appropriate QIS system; the resulting flows can 
+similarly be displayed on any GIS system. However, LaharZ has been written and tested using QGIS.
+
+The graphics produced can be displayed on any visualisation tool (including QGIS’s 3D mapping tool).
+However, LaharZ has been written and tested using Paraview for 3D graphics.
+
+The programme is based on Schilling, S.P., 1998.
+
+For detailed documentation, please see `the documentation`_ on Keith's  Github repository
+
+.. _the documentation: https://github.com/Keith1815/laharz/blob/main/docs/Laharz%202.0.0c%20User%20Guide.pdf
+
+**References:**
+
+Schilling, S.P., 1998, LaharZ—GIS Programs for automated mapping of lahar-inundation hazard zones: U.S. Geological Survey Open-File Report 98-638, 80 p.
+
+Griswold, J.P., and Iverson, R.M., 2008, Mobility statistics and automated hazard mapping for debris flows and rock avalanches (ver. 1.1, April 2014): U.S. Geological Survey Scientific Investigations Report 2007-5276, 59 p.
+
+Widiwijayanti, C., Voight, B., Hidayat, D. et al. Objective rapid delineation of areas atrisk from block-and-ash pyroclastic flows and surges. Bull Volcanol 71, 687–703 (2009). https://doi.org/10.1007/s00445-008-0254-6
+
 .. _Molasses Citations:
 
 MOLASSES
