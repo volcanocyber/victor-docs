@@ -96,6 +96,10 @@ See :ref:`MrLavaLoba Citations` here.
 
 See :ref:`pyFLOWGO Citations` here.
 
+**Scoops3D**
+
+See :ref:`Scoops3D Citations` here.
+
 **Tephra2**
 
 See :ref:`Tephra2 Citations` here.

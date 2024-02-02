@@ -253,6 +253,35 @@ In this case, the visualizations are done through a Python script included in th
 Chevrel, M., Labroquere, J., Harris, A., and Rowland, S. (2017). Pyflowgo: an open-source platform for simulation of
 channelized lava thermo-rheological properties. Computational Geosciences.
 
+.. _Scoops3D Citations:
+
+Scoops3D
+-----------
+
+Scoops3D evaluates slope stability throughout a digital landscape represented by a digital elevation
+ model (DEM). The program uses a three-dimensional (3D) method of columns limit-equilibrium analysis
+ to assess the stability of many potential landslides (typically millions) within a user-defined 
+ size range. For each potential landslide, Scoops3D assesses the stability of a rotational, spherical
+slip surface encompassing many DEM cells. It provides the least-stable potential landslide for each DEM
+ cell in the landscape, as well the associated volumes and (or) areas.
+
+ The associated workflow provides a compartmentalized way to test landslide scenarios. Cells initially ask the user
+ for descriptive information and input/output folders. Continuing on, a groundwater pressure and material properties
+ are a vital required input. Continuing on, the user must enter an earthquake loading coefficient as a fraction of gravity.
+ Next, the method for computing the factor of safety is specified. The subsequent three cells are used to specify the search area,
+ which is a 3D domain. These parameters include DEM x, y, and z boundaries, as well as upper and lower
+ limits for surface failure. Finally, a handful of flags may be set to generate additional outputs
+ for the convenience of the modeler. Further cells can be run without additional input, though the visualized output can be changed
+ between the primary outputs.
+
+ For additional context and a more detailed manual, please `refer to this document <https://pubs.usgs.gov/tm/14/a01/pdf/tm14-a1.pdf>`_ 
+
+**References:**
+
+Reid, M.E., Christian, S.B., Brien, D.L., and Henderson, S.T., 2015, Scoops3D—Software to analyze 3D slope
+stability throughout a digital landscape: U.S. Geological Survey Techniques and Methods, book 14, chap. A1, 218 p.,
+http://dx.doi.org/10.3133/tm14A1
+
 .. _Tephra2 Citations:
 
 Tephra2
