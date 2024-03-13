@@ -36,7 +36,7 @@ common actions for the hub, such as file I/O and cross-library visualization are
    * - Gas/Degassing
      - Conflow, DISGAS, Sulfur_X, TWODEE
    * - Miscellanous
-   * - Scoops3D 
+     - Scoops3D 
 
 Utilizing Workflows
 --------------------
