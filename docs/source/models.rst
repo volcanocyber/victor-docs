@@ -19,6 +19,25 @@ common actions for the hub, such as file I/O and cross-library visualization are
 .. note:: Due to the varied languages and file requirements, additional files neccesary for the models may be included in
     the generated folders. Intended output files will be clearly specified by both the workflow and documentation.
 
+.. list-table:: Available Models
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Volcanic Process
+     - Relevant Models
+   * - Lava
+     - IMEX_LAVA, Lava2D, MOLASSES, MrLavaLoba, pyFLOWGO
+   * - Ash
+     - Hazmap, Hysplit
+   * - Tephra
+     - tephra2
+   * - Pyroclastic flows/debris
+     - IMEX_SfloW2D,TITAN2D
+   * - Gas/Degassing
+     - Conflow, DISGAS, Sulfur_X, TWODEE
+   * - Miscellanous
+   * - Scoops3D 
+
 Utilizing Workflows
 --------------------
 
