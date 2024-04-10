@@ -214,3 +214,58 @@ SRTMGL3, SRTMGL1, SRTMGL1_E, AW3D30, AW3D30_E, SRTM15Plus, NASADEM, COP30, COP90
 ``dataset``: Allows you to choose from different DEM providers. This allows for for varying resolutions, as well as alternatives in case of missing data.
 Additionally, some of the datasets include bathymetry, or unique coverage. The sets are defined as:
 SRTMGL3, SRTMGL1, SRTMGL1_E, AW3D30, AW3D30_E, SRTM15Plus, NASADEM, COP30, COP90, EU_DTM.
+
+.. code-block:: python
+    
+    def search_opentopo(minx, maxx, miny, maxy, detail=False,federated=True):
+
+``minx``: leftmost longitude bound of AOI
+
+``maxx``: rightmost longitude bound of AOI
+    
+``miny``: lowest latitude bound of AOI
+
+``maxy``: highest latitude bound of API
+    
+``details``: optional, toggle to show detailed metadata
+
+``federated``: optional, toggle to ignore non federated datasets, such as USGS.
+
+.. code-block:: python
+
+    def dem_to_utm(infile, outfile=None):
+    
+``infile``: relative or aboslute path to DEM
+
+``outfile``: Optional string to save new file to, will overwrite original otherwise.
+
+.. code-block:: python
+    def download_dem_usgs(north, south, east, west, outputFormat, res):
+
+``north``: north latitude bound of AOI
+
+``south``: south latitude bound of AOI
+
+``east``: east longitude bound of AOI
+
+``west``: west longitude bound of AOI
+``outputFormat``: select from: [ascii, tif]. Selecting ascii or geotiff format for file
+``res``: choose resolution of DEM:
+    '1m' - 1 meter
+    '10m' - 10 meter
+    '30m' - 30 meter
+
+Utility Functions
+-----------------
+
+.. code-block:: python
+
+    def search_volcano(name):
+
+``name``: name of the volcano the user wants geographic data on
+
+.. code-block:: python
+
+    def convert_molasses(output_name):
+
+``output_name``: name of output ascii file for MOLASSES data
