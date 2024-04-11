@@ -322,13 +322,13 @@ resulting in an isomass tricontour of the tephra dispersion. The VICTOR team is 
 **References:**
 
 Bonadonna, C., Connor, C. B., Houghton, B. F., Connor, L., Byrne, M., Laing, A., and Hincks, T. K. (2005) Probabilistic modeling of tephra dispersal: 
-Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand, Journal of Geophysical Research: Solid Earth 110(B3). DOI 10.1029/2003JB002896
+Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand, Journal of Geophysical Research: Solid Earth 110(B3). DOI 10.1029/2003JB002896 https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2003JB002896
 
-Connor, Laura J., and Charles B. Connor (2006) Inversion is the key to dispersion: understanding eruption dynamics by inverting tephra fallout In H. M. Mader, S. G. Coles, C. B. Connor & L. J. Connor (Eds.), Statistics in Volcanology, Geological Society of London Special Publications 231. DOI 10.1144/IAVCEI001.18
+Connor, Laura J., and Charles B. Connor (2006) Inversion is the key to dispersion: understanding eruption dynamics by inverting tephra fallout In H. M. Mader, S. G. Coles, C. B. Connor & L. J. Connor (Eds.), Statistics in Volcanology, Geological Society of London Special Publications 231. DOI 10.1144/IAVCEI001.18 https://pubs.geoscienceworld.org/gsl/books/edited-volume/1732/chapter/107601115/Inversion-is-the-key-to-dispersionunderstanding
 
-Biass, Sebastien, Bagheri, Gholamhossein, Aeberhard, William H., and Bonadonna, Costanza (2014) TError:  towards a better quantification of the uncertainty propagated during the characterization of tephra deposits, Statistics in Volcanology 1(2):1-27. DOI 10.5038/2163-338X.1.2
+Biass, Sebastien, Bagheri, Gholamhossein, Aeberhard, William H., and Bonadonna, Costanza (2014) TError:  towards a better quantification of the uncertainty propagated during the characterization of tephra deposits, Statistics in Volcanology 1(2):1-27. DOI 10.5038/2163-338X.1.2 https://digitalcommons.usf.edu/siv/vol1/iss1/2/
 
-Biass, S., Bonadonna, C., Connor, L., and Connor, C. (2016) TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout, Journal of Applied Volcanology 5(1):10. DOI 10.1186/s13617-016-0050-5 
+Biass, S., Bonadonna, C., Connor, L., and Connor, C. (2016) TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout, Journal of Applied Volcanology 5(1):10. DOI 10.1186/s13617-016-0050-5 https://appliedvolc.biomedcentral.com/articles/10.1186/s13617-016-0050-5
 
 
 .. _Titan2D Citations:
@@ -376,9 +376,11 @@ Hankin, R., Britter, R. (1999a). TWODEE: the Health and Safety Laboratory's shal
 Hankin, R., Britter, R. (1999b). TWODEE: the Health and Safety Laboratory's shallow layer model for heavy gas dispersion. Part 2. Outline and validation of the computational scheme. J. Hazard. Mater. A66, 227-237.
 
 Hankin, R., Britter, R. (1999c). TWODEE: the Health and Safety Laboratory's shallow layer model for heavy gas dispersion. Part 3. Experimental validation (Thorney island). J. Hazard. Mater. A66, 237-261.
+https://pubmed.ncbi.nlm.nih.gov/10334822/
 
-Costa A., Chiodini G., Granieri D., Folch A., Hankin R.K.S., Caliro S., Cardellini C., Avino R. (2008). A shallow layer model for heavy gas dispersion from natural sources: application and hazard assessment at Caldara di Manziana, Italy., Geochem. Geophys. Geosyst., 9, Q03002, doi: 10.1029/2007GC001762.
+Costa A., Chiodini G., Granieri D., Folch A., Hankin R.K.S., Caliro S., Cardellini C., Avino R. (2008). A shallow layer model for heavy gas dispersion from natural sources: application and hazard assessment at Caldara di Manziana, Italy., Geochem. Geophys. Geosyst., 9, Q03002, doi: 10.1029/2007GC001762. https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2007GC001762
 
 Folch A., Costa A., Hankin R.K.S., 2009. TWODEE-2: A shallow layer model for dense gas dispersion on complex topography, Comput. Geosci., doi:10.1016/j.cageo.2007.12.017
+https://www.sciencedirect.com/science/article/pii/S0098300408001404
 
-Chiodini G., Granieri D., Avino R., Caliro S., Costa A., Minopoli C., Vilardo G., (2010) Non-volcanic CO2 Earth degassing: The case of Mefite di Ansanto (Southern Apennines), Italy, Geophys. Res. Lett., Vol. 37, L11303, doi: 10.1029/2010GL042858
+Chiodini G., Granieri D., Avino R., Caliro S., Costa A., Minopoli C., Vilardo G., (2010) Non-volcanic CO2 Earth degassing: The case of Mefite di Ansanto (Southern Apennines), Italy, Geophys. Res. Lett., Vol. 37, L11303, doi: 10.1029/2010GL042858 https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL042858
