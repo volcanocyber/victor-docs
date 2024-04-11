@@ -92,11 +92,11 @@ and can then run the following cell to output a set of plots over the timespan.
 
 **References**
 
-\A. Costa, G. Macedonio, Chiodini G., 2005. Numerical model of gas dispersion emitted from volcanic sources. Annals of Geophysics, Vol. 48: 805-815.
+\A. Costa, G. Macedonio, Chiodini G., 2005. Numerical model of gas dispersion emitted from volcanic sources. Annals of Geophysics, Vol. 48: 805-815. https://www.annalsofgeophysics.eu/index.php/annals/article/view/3236
 
-Granieri D., Costa A., Macedonio G., Chiodini G., Bisson M. (2013) Carbon dioxide in the city of Naples: contribution and effects of the volcanic source, J. Volcanol. Geotherm. Res., Vol. 260: 52-61, doi: 10.1016/j.jvolgeores.2013.05.003
+Granieri D., Costa A., Macedonio G., Chiodini G., Bisson M. (2013) Carbon dioxide in the city of Naples: contribution and effects of the volcanic source, J. Volcanol. Geotherm. Res., Vol. 260: 52-61, doi: 10.1016/j.jvolgeores.2013.05.003 https://www.sciencedirect.com/science/article/pii/S0377027313001443
 
-Costa A., Macedonio G. (2016) DISGAS: A model for passive DISpersion of GAS, Rapporti tecnici INGV, N. 332, Istituto Nazionale Di Geofisica e Vulcanologia, Italy
+Costa A., Macedonio G. (2016) DISGAS: A model for passive DISpersion of GAS, Rapporti tecnici INGV, N. 332, Istituto Nazionale Di Geofisica e Vulcanologia, Italy http://datasim.ov.ingv.it/download/disgas/manual-disgas-2.0.pdf
 
 .. _Hazmap Citations:
 
@@ -117,7 +117,7 @@ We are currently working on adding a basemap background to this graph.
 
 **References:**
 
-Macedonio et al., 2005 G. Macedonio, A. Costa and A. Longo, A computer model for volcanic ash fallout and assessment of subsequent hazard, Comput. Geosci. 31 (7) (2005), pp. 837–845.
+Macedonio et al., 2005 G. Macedonio, A. Costa and A. Longo, A computer model for volcanic ash fallout and assessment of subsequent hazard, Comput. Geosci. 31 (7) (2005), pp. 837–845. https://www.sciencedirect.com/science/article/pii/S0098300405000269
 
 Antonio Costa (2013), "Hazmap," https://theghub.org/resources/hazmap.
 
@@ -178,9 +178,9 @@ containing time series data for the temperature and depth are both supplied as o
 
 Elisa Biaioli's thesis: https://dx.doi.org/10.15167/biagioli-elisa_phd2021-10-27
 
-E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow water model for viscous fluids and positivity preserving numerical approximation. Applied Mathematical Modeling, 94:482–505, 2021. doi: 10.1016/j.apm.2020.12.036.
+E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow water model for viscous fluids and positivity preserving numerical approximation. Applied Mathematical Modeling, 94:482–505, 2021. doi: 10.1016/j.apm.2020.12.036. https://www.sciencedirect.com/science/article/pii/S0307904X21000019
 
-M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019.
+M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019. https://gmd.copernicus.org/articles/12/581/2019/
 
 .. _Laharz Citations:
 
@@ -207,9 +207,9 @@ For detailed documentation, please see `the documentation`_ on Keith's  Github r
 
 **References:**
 
-Schilling, S.P., 1998, LaharZ—GIS Programs for automated mapping of lahar-inundation hazard zones: U.S. Geological Survey Open-File Report 98-638, 80 p.
+Schilling, S.P., 1998, LaharZ—GIS Programs for automated mapping of lahar-inundation hazard zones: U.S. Geological Survey Open-File Report 98-638, 80 p. https://pubs.usgs.gov/publication/ofr98638
 
-Griswold, J.P., and Iverson, R.M., 2008, Mobility statistics and automated hazard mapping for debris flows and rock avalanches (ver. 1.1, April 2014): U.S. Geological Survey Scientific Investigations Report 2007-5276, 59 p.
+Griswold, J.P., and Iverson, R.M., 2008, Mobility statistics and automated hazard mapping for debris flows and rock avalanches (ver. 1.1, April 2014): U.S. Geological Survey Scientific Investigations Report 2007-5276, 59 p. https://pubs.usgs.gov/sir/2007/5276/
 
 Widiwijayanti, C., Voight, B., Hidayat, D. et al. Objective rapid delineation of areas atrisk from block-and-ash pyroclastic flows and surges. Bull Volcanol 71, 687–703 (2009). https://doi.org/10.1007/s00445-008-0254-6
 
@@ -229,9 +229,9 @@ a JPG of the final figure.
 
 **References:**
 
-Connor, L. J., Connor, C. B., Meliksetian, K., & Savov, I. (2012) Probabilistic approach to modeling lava flow inundation: a lava flow hazard assessment for a nuclear facility in Armenia. Journal of Applied Volcanology (1):3. DOI 10.1186/2191-5040-1-3
+Connor, L. J., Connor, C. B., Meliksetian, K., & Savov, I. (2012) Probabilistic approach to modeling lava flow inundation: a lava flow hazard assessment for a nuclear facility in Armenia. Journal of Applied Volcanology (1):3. DOI 10.1186/2191-5040-1-3 https://appliedvolc.biomedcentral.com/articles/10.1186/2191-5040-1-3
 
-Kubanek, J., Richardson, J. A., Charbonnier, S. J., & Connor, L. J. (2015) Lava flow mapping and volume calculations for the 2012–2013 Tolbachik, Kamchatka, fissure eruption using bistatic TanDEM-X InSAR. Bulletin of Volcanology 77(12):106. DOI 10.1007/s00445-015-0989-9 
+Kubanek, J., Richardson, J. A., Charbonnier, S. J., & Connor, L. J. (2015) Lava flow mapping and volume calculations for the 2012–2013 Tolbachik, Kamchatka, fissure eruption using bistatic TanDEM-X InSAR. Bulletin of Volcanology 77(12):106. DOI 10.1007/s00445-015-0989-9 https://link.springer.com/article/10.1007/s00445-015-0989-9
 
 .. _MrLavaLoba Citations:
 
@@ -270,7 +270,7 @@ In this case, the visualizations are done through a Python script included in th
 **References:**
 
 Chevrel, M., Labroquere, J., Harris, A., and Rowland, S. (2017). Pyflowgo: an open-source platform for simulation of
-channelized lava thermo-rheological properties. Computational Geosciences.
+channelized lava thermo-rheological properties. Computational Geosciences. https://ui.adsabs.harvard.edu/abs/2018CG....111..167C/abstract
 
 .. _Scoops3D Citations:
 
