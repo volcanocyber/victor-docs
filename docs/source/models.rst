@@ -25,18 +25,25 @@ common actions for the hub, such as file I/O and cross-library visualization are
 
    * - Volcanic Process
      - Relevant Models
-   * - Lava
-     - IMEX_LAVA, Lava2D, MOLASSES, MrLavaLoba, pyFLOWGO
-   * - Ash
-     - Hazmap, Hysplit
-   * - Tephra
-     - tephra2
-   * - Pyroclastic flows/debris
-     - IMEX_SfloW2D,TITAN2D
-   * - Gas/Degassing
-     - Conflow, DISGAS, Sulfur_X, TWODEE
-   * - Miscellanous
-     - Scoops3D 
+   * - Lava Flows
+     - IMEX-Lava,Lava2d, pyFLOWGO,	MrLavaLoba, MOLASSES,	VolcFlow, VENUSS
+   * - PDCs
+     - TITAN2D, IMEX_SfloW2D_V2 
+   * - Ash Dispersal
+     - HAZMAP, HySPLIT
+   * - Tephra dispersal
+     - Tephra2
+   * - Gas dispersal
+     - DISGAS, HySPLIT, TWODEE
+   * - Lahars
+     - LaharZ
+   * - Slope Stability
+     - Scoops3D
+   * - Sulfur/Geochemical Degassing
+     - Sulfur_X
+   * - Conduit ascent
+     - CONFORt
+
 
 Utilizing Workflows
 --------------------
