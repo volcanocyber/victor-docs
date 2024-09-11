@@ -30,9 +30,9 @@ common actions for the hub, such as file I/O and cross-library visualization are
    * - PDCs
      - TITAN2D, IMEX_SfloW2D_V2 
    * - Ash Dispersal
-     - HAZMAP, HySPLIT
+     - HAZMAP, HySPLIT, Fall3D
    * - Tephra dispersal
-     - Tephra2
+     - Tephra2, Fall3D
    * - Gas dispersal
      - DISGAS, HySPLIT, TWODEE
    * - Lahars
@@ -42,7 +42,7 @@ common actions for the hub, such as file I/O and cross-library visualization are
    * - Sulfur/Geochemical Degassing
      - Sulfur_X
    * - Conduit ascent
-     - CONFORt
+     - CONFORT
 
 
 Utilizing Workflows
@@ -104,6 +104,25 @@ and can then run the following cell to output a set of plots over the timespan.
 Granieri D., Costa A., Macedonio G., Chiodini G., Bisson M. (2013) Carbon dioxide in the city of Naples: contribution and effects of the volcanic source, J. Volcanol. Geotherm. Res., Vol. 260: 52-61, doi: 10.1016/j.jvolgeores.2013.05.003 https://www.sciencedirect.com/science/article/pii/S0377027313001443
 
 Costa A., Macedonio G. (2016) DISGAS: A model for passive DISpersion of GAS, Rapporti tecnici INGV, N. 332, Istituto Nazionale Di Geofisica e Vulcanologia, Italy http://datasim.ov.ingv.it/download/disgas/manual-disgas-2.0.pdf
+
+Fall3D
+--------
+FALL3D is a 3D model for atmospheric passive transport and deposition of particles, aerosols, and radionuclides based on the so-called
+advection-diffusion-sedimentation (ADS) equation.
+
+The code version 8.x has been redesigned and rewritten from scratch in order to overcome legacy issues and allow for successive
+optimisations in the preparation towards extreme-scale computing. The new versions include significant improvements from the point of
+view of model physics, numerical algorithmic methods, and computational efficiency. In addition, the capabilities of the model have been extended
+by incorporating new features such as the possibility of running ensemble forecasts and dealing with multiple atmospheric species (i.e. volcanic ash
+and gases, mineral dust, and radionuclides). Ensemble run capabilities are supported since version 8.1, making it possible to quantify model uncertainties
+and improve forecast quality.
+
+The workflow is currently in development in a partnership between the VICTOR team and Leo Mingari of INGV. 
+
+**References**
+
+Folch, Arnau, Costa, Antonio, Macedonio, Giovanni, & Mingari, Leonardo. (2022). FALL3D (8.1.2). Zenodo. https://doi.org/10.5281/zenodo.6343786
+
 
 .. _Hazmap Citations:
 
@@ -210,7 +229,7 @@ The programme is based on Schilling, S.P., 1998.
 
 For detailed documentation, please see `the documentation`_ on Keith's  Github repository
 
-.. _the documentation: https://github.com/Keith1815/laharz/blob/main/docs/Laharz%202.0.0c%20User%20Guide.pdf
+.. _the documentation: https://github.com/Keith1815/laharz/blob/main/docs/Laharz%202.1.3a%20User%20Guide.pdf
 
 **References:**
 
@@ -219,6 +238,21 @@ Schilling, S.P., 1998, LaharZ—GIS Programs for automated mapping of lahar-inun
 Griswold, J.P., and Iverson, R.M., 2008, Mobility statistics and automated hazard mapping for debris flows and rock avalanches (ver. 1.1, April 2014): U.S. Geological Survey Scientific Investigations Report 2007-5276, 59 p. https://pubs.usgs.gov/sir/2007/5276/
 
 Widiwijayanti, C., Voight, B., Hidayat, D. et al. Objective rapid delineation of areas atrisk from block-and-ash pyroclastic flows and surges. Bull Volcanol 71, 687–703 (2009). https://doi.org/10.1007/s00445-008-0254-6
+
+Widiwijayanti, C., 2018, LaharZ: an open-source tool for the modeling of surface flows and hazards. Geosci. Model Dev., 9: 1–17, 2018. doi: 10.5194/gmd-9-1-2018. https://gmd.copernicus.org/articles/9/1/2018
+
+.. _Magmaxiysm Citations:
+
+Magmaxiysm
+-----------
+This model simulates the dynamics of a viscoelastic medium surrounding an axisymmetric magma cavity. A small python module `magmaxisym`` 
+is provided for simulating the dynamics of a Maxwell-type viscoelastic medium surrounding an ellipsoidal axisymmetric magma cavity. 
+The module is entirely based on the open source finite element library NGSolve.
+
+**References:**
+
+Rucker, C., Erickson, B. A., Karlstrom, L., Lee, B., & Gopalakrishnan, J. (2022). A computational framework for time‐dependent deformation in viscoelastic magmatic systems.
+Journal of Geophysical Research: Solid Earth, 127(9). https://doi.org/10.1029/2022jb024506 
 
 .. _Molasses Citations:
 
@@ -256,7 +290,23 @@ The rest of the workflow configures and displays the flow based on the output sh
 M. de' Michieli Vitturi and S. Tarquini. MrLavaLoba: A new probabilistic model for the simulation of lava flows as a settling process,
 Journal of Volcanology and Geothermal Research, Volume 349, 2018, Pages 323-334, ISSN 0377-0273, https://doi.org/10.1016/j.jvolgeores.2017.11.016.
 
+.. _Plumeria_wd Citations:
+
+Plumeria_wd
+------------
+Plumeria is a one-dimensional model for wind-driven volcanic plumes. 
+It was originally written in 2007 in Visual Basic to analyze plumes during the 2004-2008 eruption of Mount St. Helens (Mastin, 2007).  
+The version in this folder, Plumeria_wd, has been modified for crosswinds, translated to Fortran, and tested by comparing predicted with observed plume heights from multiple eruptions (Mastin, 2014). 
+It was compared with other 1D and 3D plume models 2016 (Costa et al., 2016).  
+It has been used in several published studies to estimate mass eruption rate from plume height (e.g., Mastin et al., 2013; Mastin et al., in press), to assess when condensation and freezing may occur in plumes,
+ and their association with lightning (e.g., Van Eaton et al., 2016, 2019, Smith et al., 2023), and to compare the path of bent plumes in laboratory studies (McNeal et al., 2019).
+
+**References:**
+
+Mastin, L.G., 2024, plumeria_wd software.  U.S. Geological Survey software program.  https://doi.org/10.5066/P1HVRKVN
+
 .. _pyFLOWGO Citations:
+
 
 pyFLOWGO
 -----------
@@ -307,6 +357,29 @@ slip surface encompassing many DEM cells. It provides the least-stable potential
 Reid, M.E., Christian, S.B., Brien, D.L., and Henderson, S.T., 2015, Scoops3D—Software to analyze 3D slope
 stability throughout a digital landscape: U.S. Geological Survey Techniques and Methods, book 14, chap. A1, 218 p.,
 http://dx.doi.org/10.3133/tm14A1
+
+
+.. _Sulfur_X Citations:
+
+Sulfur_X
+------------
+
+Sulfur_X is an advanced degassing model to track the evolution of S, CO2, H2O, and redox states in melt and co-existing vapor in ascending mafic-intermediate magma.
+In particular, Sulfur_X shows that sulfur can start degassing in the lower crust or near-surface depending on the initial S6+/ΣS and H2O in the melt.
+
+The workflow begins requesting initial values to set the state of the mode, including temperature, sulfur concentration, and granularity of pressure. 
+Next, the user must input their choices for the degassing approach for COH and sulfur. Additional information on the algorithms used can be found in the model's documentation.
+The following cell requires a file with melt inclusion data, which is key for an accurate assessment of degassing. Subsequently,
+the user can toggle Monte Carlo runs for error estimation, and set the melt fraction. Finally, advanced inputs can be entered, concerning the exact composition of the
+sulfide, the tolerance of FO2, and the water-melt fraction relation in the case of crysytallization.
+
+The model creates graphs to present the output, which the workflow embeds as images for the user to analyze and save.
+
+
+**References:**
+
+ing, S., Plank, T., Wallace, P., Rasmussen, D. J., in press. Sulfur_X: 
+A model of sulfur degassing during magma ascent. Geochemistry, Geophysics, Geosystems. https://doi.org/10.31223/X56H0F.
 
 .. _Tephra2 Citations:
 
@@ -391,3 +464,34 @@ Folch A., Costa A., Hankin R.K.S., 2009. TWODEE-2: A shallow layer model for den
 https://www.sciencedirect.com/science/article/pii/S0098300408001404
 
 Chiodini G., Granieri D., Avino R., Caliro S., Costa A., Minopoli C., Vilardo G., (2010) Non-volcanic CO2 Earth degassing: The case of Mefite di Ansanto (Southern Apennines), Italy, Geophys. Res. Lett., Vol. 37, L11303, doi: 10.1029/2010GL042858 https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL042858
+
+.. _Venuss Citations:
+
+VENUSS
+-------
+VENUSS is a model that uses finite element analysis (GetFEM++) to model solidifying and fracturing lava. As the main data is served primarily
+through a JSON file, we refer users to the VENUSS documentation and Janine Birnbaum's thesis_ for more information.
+
+.. _thesis: https://meetingorganizer.copernicus.org/EGU24/EGU24-16851.html
+
+**References**:
+
+Janine Birnbaum. (2023). JanineBirnbaum18/GetFem_breakouts: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.8335429
+
+.. _Volcflow Citations:
+
+VolcFlow
+-------
+VolcFlow is a finite-difference Eulerian code based on the depth-averaged approach and developed for the simulation of isothermal geophysical flows.  Currently,
+the only workflow that has this implemented is our PDC benchmark. The primary values changed by the user are the time constraints and the mechanical behavior.
+The latter helps specify the type of solid flow to be simulated (i.e.. PDC, lahar, debris). 
+
+**References**:
+
+Kelfoun K. (2017). A two-layer depth-averaged model for both the dilute and the concentrated parts of pyroclastic currents. Journal of Geophysical Research – Solid Earth vol.122, – DOI:10.1002/2017JB014013.
+
+Kelfoun K., Gueugneau V., Komorowsk JC, Aisyah N., Cholik N., Merciecca C. (2017). Simulation of block-and-ash flows and ash-cloud surges of the 2010 eruption of Merapi volcano with a two-layer model. Journal of Geophysical Research – Solid Earth vol.122, – DOI:10.1002/2017JB013981.
+
+Gueugneau V., Kelfoun K., Druitt T. (2019). Investigation of surge-derived pyroclastic flow formation by numerical modeling of the 25 June 1997 dome collapse at Soufrière Hills Volcano, Montserrat. Bulletin of Volcanology vol.81, p.25, – DOI:10.1007/s00445-019-1284-y.
+
+
