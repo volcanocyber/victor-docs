@@ -96,6 +96,10 @@ See :ref:`MrLavaLoba Citations` here.
 
 See :ref:`pyFLOWGO Citations` here.
 
+**Sulfur_X**
+
+See :ref:`Sulfur_X Citations` here.
+
 **Scoops3D**
 
 See :ref:`Scoops3D Citations` here.
@@ -108,6 +112,13 @@ See :ref:`Tephra2 Citations` here.
 
 See :ref:`Titan2D Citations` here.
 
+**VENUSS**
+
+See :ref:`VENUSS Citations` here.
+
+**VolcFlow**
+
+See :ref:`VolcFlow Citations` here.
 Contributing Models and Hub Additions
 -------------------------------------
 If you believe your model would be a good fit for our platform, please email victor@ldeo.columbia.edu with a link to the code on a version-control platform
