@@ -19,14 +19,14 @@ common actions for the hub, such as file I/O and cross-library visualization are
 .. note:: Due to the varied languages and file requirements, additional files neccesary for the models may be included in
     the generated folders. Intended output files will be clearly specified by both the workflow and documentation.
 
-.. list-table:: Available Models
+.. list-table:: Currently available Models (please reach out if interested in other tools not currently listed)
    :widths: 50 50
    :header-rows: 1
 
    * - Volcanic Process
      - Relevant Models
    * - Lava Flows
-     - IMEX-Lava,Lava2d, pyFLOWGO,	MrLavaLoba, MOLASSES,	VolcFlow, VENUSS
+     - IMEX-Lava, Lava2d, pyFLOWGO,	MrLavaLoba, MOLASSES,	VolcFlow, VENUSS
    * - PDCs
      - TITAN2D, IMEX_SfloW2D_V2 
    * - Ash Dispersal
