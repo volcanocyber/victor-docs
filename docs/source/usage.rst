@@ -14,6 +14,25 @@ This will direct you to a form where you can provide the neccesary information.
 
 .. _runmodels:
 
+Choose an Environment
+----------------------
+
+On initial login to the hub, you will be prompted to select an environment. You can choose a machine with a or without a GPU. The VICTOR team recommends the
+machines without GPU access unless CUDA or similar high peformance frameworks are used in one's work.
+
+.. image:: ./images.png
+
+There are three images available to choose from. The first image is the default VICTOR environment, and the only one configured to run models. The majority of users should choose this.
+The Pangeo images prioritize the larger machine learning packages, PyTorch and TensorFlow in particular. These are recommended for advanced users.
+
+.. image:: ./type.png
+
+Finally, you must choose a resource allocation for your image. The equivalent to a modern laptop is the 7.4 GB allocation. If running light models or none at all,
+smaller machines are recommended, and will also save our team money! For heavy workloads, use up to 60.6 GB of RAM. If a need arises to use the the 121.2 GB allocation,
+please contact victor@ldeo.columbia.edu so we can prepare accordingly.
+
+.. image:: ./resource.png
+
 Once you are able to access the hub, you will see a screen very similar to this:
 
 .. image:: ./victor.png
