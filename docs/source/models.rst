@@ -55,7 +55,7 @@ on the model, for compatibility's sake.
 
 VICTOR offers three sets of options for visualization. The first is through any of the dozen libraries included in
 the built-in conda environment. Second is the custom library ``victor.py`` for sharp and accurate
-plotting through a handful of reuable functions. For the most versastile work, a virtual desktop with
+plotting through a handful of reusable functions. For the most versatile work, a virtual desktop with
 QGIS resides for a fully featured experience.
 
 .. _Conflow Citations:
@@ -67,10 +67,18 @@ Confort is an updated version of Conflow, an open-source numerical model for flo
 Confort's improvements include more accurate rheological parameters and equations, evaluations of crystal-bearing rheology,
 additions of crystal and vesicle size distribution, and integration of degassing in both equilibrium and disequilibrium conditions.
 
-The example workflow sparse and should be fairly easy to follow. After importing the necessary libraries,
-The first cell contains all input parameters, ranging from the pressure at the beginning and ends of the model to the weight percent
-of various chemical compounds and particles. The following two cells can be run without input. Following these, please
+The example workflow is sparse and should be fairly easy to follow. After importing the necessary libraries,
+the first cell contains all input parameters, ranging from the pressure at the beginning and ends of the model to the weight percent
+of various chemical compounds and particles. 
+
+.. image:: ./Confort1.png
+
+The following two cells can be run without input. Following these, please
 thoroughly read the markdown cell, and select 7 outputs from the list of 27. Input those numbers into the next cell in a list.
+
+.. image:: ./Confort2.png
+.. image:: ./Confort3.png
+
 Every subsequent cell can be run without user interaction. There is an intermediate output specified by the ``name`` variable,
 but the most gracefully formatted file will always be ``Conflow.csv``, output to the current directory.
 
@@ -87,11 +95,22 @@ Turbulent diffusion is based on the K-theory, and the wind field can be evaluate
 a terrain-following mass consistent wind model. The model can be used to forecast concentration of gas (or dust) over complex terrains.
 
 The DISGAS workflow begins with parameters relating to the date of the simulation, as well as its duration, and options concerning if it was continuing from an existing run.
+
+.. image:: ./disgas1.png
+
 Next, one must enter data about the grid and general topography. The grid information is required, though the exact elevation can either be sourced from a file or simplified into a slope.
+
+.. image:: ./disgas2.png
+
 The third cell asks the user how they want to treat the model. When treated as a gas with no settling velocity, extra parameters are not needed.
-However, when treated as a set of particles, the physical properties and mathematical methods to calculate the settling velocity.
+However, when treated as a set of particles, the physical properties and mathematical methods to calculate the settling velocity are required.
 Then, the user must specify the vertical and horizontal wind turbulence models as well as the soil roughness model and diffusion coefficients.
+
+.. image:: ./disgas3.png
+
 The final input cell requests the user to input file paths for supplemental input data in addition to output intervals and the option to output directional velocities and concentration.
+
+.. image:: ./disgas4.png
 
 The next two cells format the input and run the model.
 Depending on the number of wind data points provided, multiple layers will be output. The user must then specify a layer,
@@ -134,9 +153,14 @@ which outputs the corresponding ground deposit in its aptly named deposit mode. 
 of overcoming a given loading threshold in the ground deposit by using a set of different wind profiles recorded in different days in its probability mode.
 
 The example Hazmap workflow begins with a variety of flags and specifications for the Hazmap grid and output structure.
-Comments should give some context for the inputs, though a manual is hyperlinked for the user's convenience.
+Comments should give some context for the inputs, though a manual, indicated in red below, is hyperlinked for the user's convenience.
+
+.. image:: ./Hazmapmanual.png
+
 The next cell is the last that requires user input. Take note that all four of ``diameters, densities, shapes, weight_percent``
 should be equal lengths, and equal to ``num_particle_types``. The weights should also add up to 100, as they are percentages.
+
+.. image:: ./Hazmap.png
 
 Subsequent cells can be run without additional interactions, resulting in a netCDF file named ``hazmap.nc`` and a contour graph.
 We are currently working on adding a basemap background to this graph.
@@ -155,14 +179,20 @@ Hysplit
 The Hybrid Single-Particle Lagrangian Integrated Trajectory model (HYSPLIT)[1] is a computer model created by NOAA that is used to compute air parcel trajectories to determine how far and in what direction a parcel of air, and subsequently air pollutants, will travel.
 
 VICTOR contains the entirety of Hysplit, though our workflow focuses on modeling ash deposition and concentration.
-First, the user is asked to specify the particle distribution configuration, vertical and horizontal turbulence models, as well as the output file name.
-Equally as important in the first cell is the number of particles per cycle, as well as the maximum particles released.
+First, the user is asked to specify the particle distribution configuration(1), vertical and horizontal turbulence models(2), as well as the output file name(5).
+Equally as important in the first cell is the number of particles per cycle(3), as well as the maximum particles released(4).
 
-The second input cell requires the user to enter the start date, latitude/longitude of the volcano and the ash column, and the maximum runtime of the model.
-It also requires an input data grid. For each particle, an identifier, along with emission rate, hours of emission, and start time are necessary.
+.. image:: ./HysplitCell1.png
 
-The final input cell has the user concentration grid information, along with sampling interval timing, and then a swath of particle information including,
+The second input cell requires the user to enter the start date(1), latitude/longitude of the volcano(2) and the ash column(3), and the maximum runtime of the model(4).
+It also requires an input data grid(5). For each particle, an identifier, along with emission rate, hours of emission, and start time are necessary(6).
+
+.. image:: ./HysplitCell2.png
+
+The final input cell has the user concentration grid information(1), along with sampling interval timing(2), and then a swath of particle information(3) including,
 but not limited to, the density, diameter, deposition velocity and decay rate if it is an unstable molecule.
+
+.. image:: ./HysplitCell3.png
 
 Upon completing the inputs, the user will run the model and be given a choice of timesteps to pick from. After this choice, every other cell can be run. Three images will be the result.
 First, the workflow uses a built-in visualizer from Hysplit. Next, it uses the matplotlib library. Finally, we use Bokeh for and interactivate and more data-rich experience.
@@ -180,14 +210,28 @@ IMEX
 
 IMEX-SfloW2d is a depth-averaged numerical flow model for pyroclastic avalanches. 
 The configuration file is extremely in depth, so the workflow splits it into more manageable pieces.
-We begin with simple parameters to set a run name, simulation time constraints, and output files. Next are
+
+We begin with simple parameters to set a run name, simulation time constraints, and output files. 
+
+.. image:: ./IMEX1.png
+
+Next are
 radial source parameters, described as where ``The source of mass is initialized. The cells belonging 
-to the source are are identified ( source_cell(j,k) = 2 )``. The next cell sets bounds for the DEM we use, 
+to the source are are identified ( source_cell(j,k) = 2 )``. 
+
+.. image:: ./IMEX2.png
+
+The next cell sets bounds for the DEM we use, 
 and some flags that allow for more granular setting of constants. The next cell functions as a sanity check for the DEM.
+
+.. image:: .IMEX3.png
 
 After the DEM, we set temperature parameters of the environment and related material thermal constants, followed by the algorithms
 selected for the numerical slope calculations for each cell. Gravity is a configurable option for future flexibility. Rheological 
 parameters and constants are then assigned, followed by gas transport parameters, which constitute gas attributes and pressure specification.
+
+.. image:: .IMEX4.png
+.. image:: .IMEX5.png
 
 The given parameters are a condensed version of the overall choices. Additional scenarios can be added, such as the pyroclastic source
 generating from a collapsing volume. Further documentation will be provided in the future, though the souce code is the only reference for now.
@@ -195,7 +239,10 @@ All values after the DEM check can be kept as is for a reasonable estimate. The 
 to the DEM to function properly.
 
 Subsequent cells write out the config files and run the model. The only other place input is neccesary is a one line cell with the ``step`` variable.
-IMEX outputs data at every dt chosen by the user, so in order to view data at a given timestamp, you **must** choose a step. All subsequent cells can
+
+.. image:: .IMEX6.png
+
+IMEX outputs data at every _dt_ chosen by the user, so in order to view data at a given timestamp, you **must** choose a step. All subsequent cells can
 ran without input to give a detailed output of both temperature and thickness of the flow at a given time. Additionally, seperate netCDF files 
 containing time series data for the temperature and depth are both supplied as output, along with a JPG of the figure.
 
@@ -260,7 +307,11 @@ MOLASSES
 ------------
 
 MOdular LAva Simulation Software for Earth Science, or MOLASSES for short, is a probabalistic lava flow simulation tool. The required
-inputs are very straightforward. In the first cell after the imports, all the user mnust enter is the residual thickness, 
+inputs are very straightforward. 
+
+.. image:: ./Molasses1.png
+
+In the first cell after the imports, all the user mnust enter is the residual thickness, 
 the total volume of lava erupted, the pulse volume per simulation tick, and the DEM filename, along with the origin points
 in UTM of the eruption. The user may optionally repeat runs due to the probabalisticnature of the model. After this cell, 
 the rest of the model can run without input. If desired, the zoom level can be selected between a snapshot of the flow area and
@@ -278,6 +329,8 @@ Kubanek, J., Richardson, J. A., Charbonnier, S. J., & Connor, L. J. (2015) Lava 
 
 MrLavaLoba
 ------------
+
+.. image:: ./MrLavaLoba.png 
 
 MrLavaLoba is a stochastic model for simulating lava flows, written in Python. The workflow for this model begins with a large
 amount of text, explaining input parameters in detail. After neccesary libraries are imported, all parameters are in the next cell.

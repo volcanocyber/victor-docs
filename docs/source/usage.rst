@@ -6,21 +6,24 @@ Usage
 Registration
 ------------
 
-To gain access to VICTOR, you must first register. Currently, we are authenticating users through Github, and thus all users 
-are required to possess an account. To register, please visit the VICTOR website_ and click on the *Sign Up* button on the right of the menu.
+To gain access to VICTOR, you must first register. Currently, we are authenticating users through [Github](https://github.com/signup), and thus all users 
+are required to possess an account. Once you have created a GitHub account, please visit the VICTOR website_ and click on the *Sign Up* button on the right of the menu to register.
 This will direct you to a form where you can provide the neccesary information.
 
 .. _website: https://victor.ldeo.columbia.edu
 
 .. _runmodels:
+.. image:: ./sign up.png 
 
-Once you are able to access the hub, you will see a screen very similar to this:
+In order to access the VICTOR hub after registering, navigate to the VICTOR [website](https://victor.ldeo.columbia.edu/), and select *Hub Portal* from the menu, shown below. 
 
-.. image:: ./victor.png
+.. image:: ./hubportal.png
+First, you will select the server size required for your project. Then, select *Start* at the bottom of the page. 
+
 
 The Launcher
 -------------
-The first screen you will be met with is the launcher, providing an variety of environments to utilize.
+The first screen you will be met with is the launcher, shown below, providing an variety of environments to utilize.
 The first row of buttons is comprised of highly interactive Jupyter notebooks, as well as the desktop application.
 The VICTOR team advises using only the ``[conda env: notebook]`` tabs, as this is the environment that includes all the
 neccesary scientific packages for utilizing and visualizing models.
@@ -31,7 +34,7 @@ lines of code and run them, though not able to embed images or renderings such a
 The final row of buttons provides quick access to static files in various languages, as well as for a simple text file.
 Additionally, access to a bash terminal is accessible here, allowing for advanced users to maximize productivity in this environment.
 
-
+.. image:: ./victor.png
 
 Run Models
 ------------
@@ -44,10 +47,12 @@ files directly, or copy one, either through manual selection (right click + copy
    All files in the ``shared`` folder are read/execute only. If you would like to contribute models, data, or ideas for improvement,
    please contact victor@ldeo.columbia.edu.
 
+.. image:: ./shared.png
+
 Once this runs, you will have all necessary files contained in a new folder in your home directory. Most folders will simply contain the executable
 and the example notebook. All Juptyter notebook workflows will generate most of the supplemental files necessary for the model to run.
 
-However, DEMs are not automatically included. Users then have 4 primary options: 
+However, Digital Elevation Models (DEMs) are not automatically included. Users then have 4 primary options: 
 1. Navigate to the DEMs folder in ``shared`` and copy the relevant file to your home directory, if the file needs to be altered.
 2. Read the DEM from ``$HOME/shared/DEMs`` directly in your workflow, if no changes are required.
 3. Import your own DEM from a local machine, dragging and dropping into the file tree.
