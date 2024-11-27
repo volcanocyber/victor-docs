@@ -241,6 +241,16 @@ Widiwijayanti, C., Voight, B., Hidayat, D. et al. Objective rapid delineation of
 
 Widiwijayanti, C., 2018, LaharZ: an open-source tool for the modeling of surface flows and hazards. Geosci. Model Dev., 9: 1–17, 2018. doi: 10.5194/gmd-9-1-2018. https://gmd.copernicus.org/articles/9/1/2018
 
+.. _Lava2d Citations:
+
+Lava2d uses a 2D depth-averaged finite volume framework to solve the propagation of a rheologically variable shallow viscoplastic gravity current flowing across natural terrain. The model does not average the thermal or rheological information over the flow depth, maintaining fidelity to the strong thermal stratification 
+in lava flows by incorporating a more realistic thermal profile based on the transient cooling of a hot laminar flow of a high-Prandtl-number fluid. The novel aspects of the approach to energy propagation reduces the significant numerical 
+stiffness of typical depth-averaged energy equations resulting from large cooling rates at the surface and base of the flow as well as eliminating the need for ad hoc relationships between depth-averaged temperature and surface temperature.
+
+**References:**
+
+ Hyman, D. M. R., Dietterich, H. R., & Patrick, M. R. (2022). Toward next-generation lava flow forecasting: Development of a fast, physics-based lava propagation model. Journal of Geophysical Research: Solid Earth, 127, e2022JB024998. https://doi.org/10.1029/2022JB024998 
+
 .. _Magmaxiysm Citations:
 
 Magmaxiysm
