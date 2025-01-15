@@ -58,6 +58,18 @@ the built-in conda environment. Second is the custom library ``victor.py`` for s
 plotting through a handful of reuable functions. For the most versastile work, a virtual desktop with
 QGIS resides for a fully featured experience.
 
+.. _alphaMELTS Citations:
+
+alphaMELTS
+----------------
+
+alphaMELTS is an interface for interacting with various models of thermodynamic equilibrium in silicate systems. The current version includes
+atest source code for Rhyolite-MELTS 1.0.2, 1.1.0 and 1.2.0 (Gualda et al. 2012; Ghiorso & Gualda, 2015) and the pMELTS model.
+alphaMELTS forms the base for MELTS calculations in PetThermoTools, an open-source Python3 tool for performing phase equilibria calculations
+using the MELTS family or Holland et al. (2018) thermodynamic models. 
+
+.. note:: A workflow for alphaMELTS is in progress.
+
 .. _Conflow Citations:
 
 Conflow/Confort
@@ -67,7 +79,7 @@ Confort is an updated version of Conflow, an open-source numerical model for flo
 Confort's improvements include more accurate rheological parameters and equations, evaluations of crystal-bearing rheology,
 additions of crystal and vesicle size distribution, and integration of degassing in both equilibrium and disequilibrium conditions.
 
-The example workflow sparse and should be fairly easy to follow. After importing the necessary libraries,
+The example workflow is minimal and should be fairly easy to follow. After importing the necessary libraries,
 The first cell contains all input parameters, ranging from the pressure at the beginning and ends of the model to the weight percent
 of various chemical compounds and particles. The following two cells can be run without input. Following these, please
 thoroughly read the markdown cell, and select 7 outputs from the list of 27. Input those numbers into the next cell in a list.
@@ -117,7 +129,7 @@ by incorporating new features such as the possibility of running ensemble foreca
 and gases, mineral dust, and radionuclides). Ensemble run capabilities are supported since version 8.1, making it possible to quantify model uncertainties
 and improve forecast quality.
 
-The workflow is currently in development in a partnership between the VICTOR team and Leo Mingari of INGV. 
+.. note:: The workflow is currently in development in a partnership between the VICTOR team and Leo Mingari of INGV. 
 
 **References**
 
@@ -175,10 +187,16 @@ Rolph, G., Stein, A., and Stunder, B., (2017). Real-time Environmental Applicati
 
 .. _IMEX Citations:
 
-IMEX
-----------
+IMEX_LavaFlow & IMEX_SfloW2D_V2
+-------------------
 
-IMEX-SfloW2d is a depth-averaged numerical flow model for pyroclastic avalanches. 
+IMEX_SfloW2D_V2 is a depth-averaged numerical flow model for pyroclastic avalanches. 
+
+IMEX_LavaFlow is built on the same fundamentals but uses a modified shallow water model for lava flow 
+with vertical profiles of velocity and temperature and temperature-dependent viscosity.
+
+The notebooks are similar, and changes will be noted in the description below.
+
 The configuration file is extremely in depth, so the workflow splits it into more manageable pieces.
 We begin with simple parameters to set a run name, simulation time constraints, and output files. Next are
 radial source parameters, described as where ``The source of mass is initialized. The cells belonging 
@@ -247,6 +265,12 @@ Lava2d uses a 2D depth-averaged finite volume framework to solve the propagation
 in lava flows by incorporating a more realistic thermal profile based on the transient cooling of a hot laminar flow of a high-Prandtl-number fluid. The novel aspects of the approach to energy propagation reduces the significant numerical 
 stiffness of typical depth-averaged energy equations resulting from large cooling rates at the surface and base of the flow as well as eliminating the need for ad hoc relationships between depth-averaged temperature and surface temperature.
 
+The associated notebook starts by prompting the user to select a DEM. The file is then parsed for boundaries in latitude and longitude, to give the user
+a reference frame to where to place the vent. The next cell asks for some physical properties of the lava, i.e.the temperature, viscosity, crystallization, and the volume of lava to be erupted.
+Next, the user specifies some constants for the model, such as the specific heat capacity. Following this, the user must input rheological properties and the ambient environment temperatures.
+Penultimately, numerical parameters and simulation time should be input. Finally, the user must specify the relative location to the vent/fissure of the flow, its width, and the flow rate.
+The rest of the model can be run without further input and will result in a simple flow footprint.
+
 **References:**
 
  Hyman, D. M. R., Dietterich, H. R., & Patrick, M. R. (2022). Toward next-generation lava flow forecasting: Development of a fast, physics-based lava propagation model. Journal of Geophysical Research: Solid Earth, 127, e2022JB024998. https://doi.org/10.1029/2022JB024998 
@@ -263,6 +287,19 @@ The module is entirely based on the open source finite element library NGSolve.
 
 Rucker, C., Erickson, B. A., Karlstrom, L., Lee, B., & Gopalakrishnan, J. (2022). A computational framework for time‐dependent deformation in viscoelastic magmatic systems.
 Journal of Geophysical Research: Solid Earth, 127(9). https://doi.org/10.1029/2022jb024506 
+
+.. _MAMMA Citations:
+
+
+MAMMA
+------------
+MAMMA is a FORTRAN90 code designed to solved a conservative model for magma ascent in a volcanic conduit, described as a compressible two-phase flow
+by finite volume methods. The governing multiphase equations for two-phase compressible flow are derived using the theory of thermodynamically compatible systems (Romenski et al., 2010).
+The model is one-dimensional with different phase velocities and pressures but a single temperature for the two phases. The finite volume solver is based on a semidiscrete central scheme and it is not tied on the specific eigenstructure of the model.
+
+**References:**
+
+Assessing the influence of disequilibrium crystallization and degassing during magma ascent in effusive and explosive eruptions, de'Michieli Vitturi, M.; Clarke, A. B.; Neri, A.; Voight, B. American Geophysical Union, Fall Meeting 2011, abstract #V23H-05, 12/2011
 
 .. _Molasses Citations:
 
@@ -300,6 +337,43 @@ The rest of the workflow configures and displays the flow based on the output sh
 M. de' Michieli Vitturi and S. Tarquini. MrLavaLoba: A new probabilistic model for the simulation of lava flows as a settling process,
 Journal of Volcanology and Geothermal Research, Volume 349, 2018, Pages 323-334, ISSN 0377-0273, https://doi.org/10.1016/j.jvolgeores.2017.11.016.
 
+.. _Perple_X Citations:
+
+Perple_X
+------------
+Perple_X is a collection of Fortran77 programs for calculating phase diagrams, manipulating thermodynamic data, 
+and modeling equilibrium phase fractionation and reactive transport.
+
+.. note:: A workflow for Perple_X has not been created yet.
+
+
+**References:**
+
+ Connolly JAD (2005) Computation of phase equilibria by linear programming: A tool for geodynamic modeling and its application to subduction zone decarbonation. Earth and Planetary Science Letters 236:524-541. (Errata)
+
+Connolly JAD (2009) The geodynamic equation of state: what and how. Geochemistry, Geophysics, Geosystems 10:Q10014 DOI:10.1029/2009GC002540.
+
+Connolly JAD, Galvez ME (2018) Electrolytic fluid speciation by Gibbs energy minimization and implications for subduction zone mass transfer. Earth and Planetary Science Letters 501:90-102 doi:10.1016/ j.epsl.2018.08.024
+
+
+.. _PLUME-MoM-TSM Citations:
+
+PLUME-MoM-TSM
+------------
+PLUME-MoM-TSM is a FORTRAN90 code designed to solve the equations for a steady-state integral volcanic plume model, describing the rise in the atmosphere of a mixture of gas and volcanic ash during an eruption.
+
+The model describes the steady-state dynamics of a plume in a 3-D coordinate system, and the two-size moment (TSM) method is adopted to describe changes in grain-size distribution along the plume associated with particle loss from plume margins and with particle aggregation. For this reason, the new version is named PLUME-MoM-TSM.
+
+For the first time in a plume model, the full Smoluchowski coagulation equation is solved, allowing to quantify the formation of aggregates during the rise of the plume. In addition, PLUME-MOM-TSM allows to model the phase change of water, which can be either magmatic, added at the vent as liquid from external sources, or incorporated through ingestion of moist atmospheric air.
+
+Finally, the code includes the possibility to simulate the initial spreading of the umbrella cloud intruding from the volcanic column into the atmosphere. A transient shallow water system of equations models the intrusive gravity current, allowing to compute the upwind spreading.
+
+.. note:: A workflow for PLUME-MoM-TSM has not been created yet.
+
+**References:**
+
+de' Michieli Vitturi, M. and Pardini, F.: PLUME-MoM-TSM 1.0.0: a volcanic column and umbrella cloud spreading model, Geosci. Model Dev., 14, 1345–1377, https://doi.org/10.5194/gmd-14-1345-2021, 2021. 
+
 .. _Plumeria_wd Citations:
 
 Plumeria_wd
@@ -310,6 +384,8 @@ The version in this folder, Plumeria_wd, has been modified for crosswinds, trans
 It was compared with other 1D and 3D plume models 2016 (Costa et al., 2016).  
 It has been used in several published studies to estimate mass eruption rate from plume height (e.g., Mastin et al., 2013; Mastin et al., in press), to assess when condensation and freezing may occur in plumes,
  and their association with lightning (e.g., Van Eaton et al., 2016, 2019, Smith et al., 2023), and to compare the path of bent plumes in laboratory studies (McNeal et al., 2019).
+
+.. note:: A workflow for Plumeria_wd has not been created yet.
 
 **References:**
 
@@ -487,6 +563,8 @@ through a JSON file, we refer users to the VENUSS documentation and Janine Birnb
 **References**:
 
 Janine Birnbaum. (2023). JanineBirnbaum18/GetFem_breakouts: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.8335429
+
+.. note:: A workflow for VENUSS has not yet been created.
 
 .. _Volcflow Citations:
 
