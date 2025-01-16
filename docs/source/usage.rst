@@ -6,9 +6,9 @@ Usage
 Registration
 ------------
 
-To gain access to VICTOR, you must first register. Currently, we are authenticating users through Github, and thus all users 
-are required to possess an account. To register, please visit the VICTOR website_ and click on the *Sign Up* button on the right of the menu.
-This will direct you to a form where you can provide the neccesary information.
+To gain access to VICTOR, you must first register. Currently, we are authenticating users through Github, Gmail, or Outlook, and thus all users 
+are required to possess an account of one of the three. To register, please visit the VICTOR website_ and click on the *Sign Up* button on the right of the menu.
+This will direct you to a form where you can provide the neccesary information. Please note that the authentication process is manual, and thus may take up to 24 hours to complete, possibly longer during weekends or breaks.
 
 .. _website: https://victor.ldeo.columbia.edu
 
@@ -82,6 +82,19 @@ can access a fully featured QGIS installation, with many other programs schedule
 your personal files, and a web browser is also available for your convenience. 
 
 .. image:: ./desktop.png
+
+
+Forum
+_________
+The VICTOR team has created a forum for the computational volcanology community to ask questions, share ideas, and discuss potential improvements. 
+The forum is catagorized into various subsections of study, from geodesy to seismology to petrology. There are also catagories focused specifically
+on the VICTOR platform, as well as general questions for the community. Any interested user can sign up with just an email address. Upcoming uses
+for the Computational Volcanology forum include threads for course assignments and integration with other volcano communities.
+
+To access the forum, please navigate here_. 
+
+.. _here: https://forum.victorproject.org
+
 
 Citations and References
 ------------------------
