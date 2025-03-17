@@ -297,6 +297,7 @@ MAMMA is a FORTRAN90 code designed to solved a conservative model for magma asce
 by finite volume methods. The governing multiphase equations for two-phase compressible flow are derived using the theory of thermodynamically compatible systems (Romenski et al., 2010).
 The model is one-dimensional with different phase velocities and pressures but a single temperature for the two phases. The finite volume solver is based on a semidiscrete central scheme and it is not tied on the specific eigenstructure of the model.
 
+
 **References:**
 
 Assessing the influence of disequilibrium crystallization and degassing during magma ascent in effusive and explosive eruptions, de'Michieli Vitturi, M.; Clarke, A. B.; Neri, A.; Voight, B. American Geophysical Union, Fall Meeting 2011, abstract #V23H-05, 12/2011
@@ -326,11 +327,15 @@ Kubanek, J., Richardson, J. A., Charbonnier, S. J., & Connor, L. J. (2015) Lava 
 MrLavaLoba
 ------------
 
-MrLavaLoba is a stochastic model for simulating lava flows, written in Python. The workflow for this model begins with a large
-amount of text, explaining input parameters in detail. After neccesary libraries are imported, all parameters are in the next cell.
+MrLavaLoba is a stochastic model for simulating lava flows, written in Python. The workflow for this model begins with an exensive description
+explaining key input parameters in detail. After neccesary libraries are imported, all parameters are entered in the next cell.
 A DEM sanity check follows, continuing on to write out the input files and run the model. A convenient progress bar will show the 
 remaining time for model calculations. MrLavaLoba outputs snapshows at a given *dt* interval, so the user must pick a step to visualize.
 The rest of the workflow configures and displays the flow based on the output shapefiles given, saving a JPG of the final figure.
+
+*Flowy* is a probabilistic code to simulate the emplacement of lava. It is a re-implementation of the Mr. Lava Loba method [1,2] in C++20.
+For users who prefer a C++/lower level approach, Flowy can be used as a drop-in replacement for MrLavaLoba, often with significant time savings.
+
 
 **References:**
 
