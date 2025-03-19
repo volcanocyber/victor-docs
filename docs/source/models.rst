@@ -30,7 +30,7 @@ common actions for the hub, such as file I/O and cross-library visualization are
    * - PDCs
      - TITAN2D, IMEX_SfloW2D_V2 
    * - Ash Dispersal
-     - HAZMAP, HySPLIT, Fall3D
+     - ASH3D, HAZMAP, HySPLIT, Fall3D
    * - Tephra dispersal
      - Tephra2, Fall3D
    * - Gas dispersal
@@ -70,7 +70,29 @@ using the MELTS family or Holland et al. (2018) thermodynamic models.
 
 .. note:: A workflow for alphaMELTS is in progress.
 
+**References:**
+
+Antoshechkina, P. M. and Ghiorso, M. S., “MELTS for MATLAB: A new Educational and Research Tool for Computational Thermodynamics”, vol. 2018, Art. no. ED44B-23, 2018.
+
+Gualda, M., Ghiorso, M. S., and P. M. Antoshechkina, “MELTS: A fast and accurate thermodynamic model for silicate systems”, Journal of Geophysical Research, 2012.
+
+.. _Ash3D Citations:
+
+Ash3D
+----------------
+
+Ash3D is a 3-D Eulerian model to predict airborne volcanic ash concentration and tephra deposition during volcanic eruptions.
+This model simulates downwind advection, turbulent diffusion, and settling of ash injected into the atmosphere by a volcanic eruption column. 
+Ash advection is calculated using time-varying pre-existing wind data and a robust, high-order, finite-volume method.
+
+.. note:: A workflow for Ash3D is in progress.
+
+**References:**
+
+Schwaiger, H. F., R. P. Denlinger, and L. G. Mastin (2012), Ash3d: A finite-volume, conservative numerical model for ash transport and tephra deposition, J. Geophys. Res., 117, B04204, doi:10.1029/2011JB008968. 
+
 .. _Conflow Citations:
+
 
 Conflow/Confort
 ----------------
