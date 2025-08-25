@@ -371,11 +371,30 @@ of a control volume flowing down a channel depends on rheological properties com
 crystallization path estimated via a heat balance box model. pyFLOWGO is an updated version written completely in Python
 for increased flexibility and modernity.
 
+.. image:: ./PyFlowGo.png
+
 The first input cell directly follows the imports, simply asking for the name of the flow, the slope file, which is *not* a DEM,
-and the step size. The next cell requests flags to calculate a specific type of flux. Following this, the user must pick the method used
-for calculating various aspects of the lava's physical properties. Next, the physical dimensions of the channel should be entered.
+and the step size. 
+
+.. image:: ./PyFlowGo1.png
+
+The next cell requests flags to calculate a specific type of flux. 
+
+.. image:: ./PyFlowGo2.png
+
+Following this, the user must pick the method used
+for calculating various aspects of the lava's physical properties. 
+
+.. image:: ./PyFlowGo3.png
+
+Next, the physical dimensions of the channel should be entered.
+
+.. image:: ./PyFlowGo.png
+
 The final two cells specify eruption event parameters and thermal parameters. All subsequent cells can be run without further alteration.
 In this case, the visualizations are done through a Python script included in the pyFLOWGO library.
+
+.. image:: ./PyGoFlow5.png
 
 **References:**
 
@@ -395,13 +414,27 @@ slip surface encompassing many DEM cells. It provides the least-stable potential
  cell in the landscape, as well the associated volumes and (or) areas.
 
  The associated workflow provides a compartmentalized way to test landslide scenarios. Cells initially ask the user
- for descriptive information and input/output folders. Continuing on, a groundwater pressure and material properties
- are a vital required input. Continuing on, the user must enter an earthquake loading coefficient as a fraction of gravity.
- Next, the method for computing the factor of safety is specified. The subsequent three cells are used to specify the search area,
+ for descriptive information [1] and input/output folders [2] . Continuing on, a groundwater pressure and material properties [3]
+ are a vital required input. 
+ 
+ .. image:: ./Scoops3D1.png
+ 
+ Continuing on, the user must enter an earthquake loading coefficient as a fraction of gravity [1].
+ Next, the method for computing the factor of safety [2] is specified. 
+
+ .. image:: ./Scoops3D2.png
+ 
+ The subsequent three cells are used to specify the search area,
  which is a 3D domain. These parameters include DEM x, y, and z boundaries, as well as upper and lower
- limits for surface failure. Finally, a handful of flags may be set to generate additional outputs
+ limits for surface failure. 
+ 
+ .. image:: ./Scoops3D3.png
+ 
+ Finally, a handful of flags may be set to generate additional outputs
  for the convenience of the modeler. Further cells can be run without additional input, though the visualized output can be changed
  between the primary outputs.
+
+..image:: ./Scoops3D4.png 
 
  For additional context and a more detailed manual, please `refer to this document <https://pubs.usgs.gov/tm/14/a01/pdf/tm14-a1.pdf>`_ 
 
@@ -421,10 +454,19 @@ Sulfur_X is an advanced degassing model to track the evolution of S, CO2, H2O, a
 In particular, Sulfur_X shows that sulfur can start degassing in the lower crust or near-surface depending on the initial S6+/ΣS and H2O in the melt.
 
 The workflow begins requesting initial values to set the state of the mode, including temperature, sulfur concentration, and granularity of pressure. 
-Next, the user must input their choices for the degassing approach for COH and sulfur. Additional information on the algorithms used can be found in the model's documentation.
-The following cell requires a file with melt inclusion data, which is key for an accurate assessment of degassing. Subsequently,
-the user can toggle Monte Carlo runs for error estimation, and set the melt fraction. Finally, advanced inputs can be entered, concerning the exact composition of the
+
+.. image:: ./SulfurX1.png
+
+Next, the user must input their choices for the degassing approach for COH and sulfur [1]. Additional information on the algorithms used can be found in the model's documentation.
+The following cell requires a file with melt inclusion data [2], which is key for an accurate assessment of degassing. Subsequently,
+the user can toggle Monte Carlo runs for error estimation, and set the melt fraction[3]. 
+
+.. image:: ./SulfurX2.png 
+
+Finally, advanced inputs can be entered, concerning the exact composition of the
 sulfide, the tolerance of FO2, and the water-melt fraction relation in the case of crysytallization.
+
+.. image:: ./SulfurX3.png
 
 The model creates graphs to present the output, which the workflow embeds as images for the user to analyze and save.
 
