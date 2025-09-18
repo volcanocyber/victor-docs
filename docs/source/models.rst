@@ -539,8 +539,19 @@ Python package to flexibly explore similarities and differences between volcanic
 
 The main goal of PyVOLCANS is to help alleviate data-scarcity issues in volcanology, and contribute to developments in a range of topics,
 including (but not limited to): quantitative volcanic hazard assessment at local to global scales, investigation of magmatic and volcanic processes, a
-nd even teaching and scientific outreach. 
+nd even teaching and scientific outreach.
 
+The notebook begins asking users for 3 main parameters that PyVOLCANS uses to generate objective sets of analogue volcanoes:
+1. Target volcano: the volcano for which analogue volcanoes are being sought.
+2. Weighting scheme: set of weights assigned to each of the volcanological criteria that PyVOLCANS uses to calculate the total analogy between any two volcanoes in the GVP database
+(please see equation 1 in Tierz et al., 2019). Please make sure that your sum of weights is equal to 1 (i.e. the total analogy is a weighted average of the single-criterion analogies).
+3. Number of top analogues: number of analogues with the highest total analogy with respect to the target volcano that are displayed as an output in this Jupyter Notebook.
+
+Next, the workflow validates the input arguments and calculates the total analogy score. The folliowing cell displays the top
+*n* analogues. The notebook continues on to demonstrate additional functionality of pyVOLCANS, such as searching for specific volcanoes and comparing against the chosen,
+as well as *a priori analogues*. In short, provided that PyVOLCANS calculates the total analogy between the target volcano and any volcano in the GVP database,
+the program can calculate, for example, the proportion, or percentage, of volcanoes in the database that are classified as better analogues
+(i.e. higher total analogy) than the selected a priori analogues. 
 **References:**
 
 Tierz, P., Loughlin, S.C. & Calder, E.S. VOLCANS: an objective,
@@ -682,6 +693,18 @@ https://www.sciencedirect.com/science/article/pii/S0098300408001404
 
 Chiodini G., Granieri D., Avino R., Caliro S., Costa A., Minopoli C., Vilardo G., (2010) Non-volcanic CO2 Earth degassing: The case of Mefite di Ansanto (Southern Apennines), Italy, Geophys. Res. Lett., Vol. 37, L11303, doi: 10.1029/2010GL042858 https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL042858
 
+.. _VESIcal Citations:
+
+VESIcal
+-------
+VESIcal is a generalized Python library for calculating and plotting various things related to mixed volatile (H2O-CO2) solubility in silicate melts.
+
+**References**:
+
+Iacovino, K., Matthews, S., Wieser, P. E., Moore, G. M., & Begue, F. (2021). VESIcal v. 1.0.1 (1.0.1). Zenodo. https://doi.org/10.5281/zenodo.5095382
+
+.. note:: A workflow for VESIcal has not yet been created.
+
 .. _Venuss Citations:
 
 VENUSS
@@ -713,4 +736,13 @@ Kelfoun K., Gueugneau V., Komorowsk JC, Aisyah N., Cholik N., Merciecca C. (2017
 
 Gueugneau V., Kelfoun K., Druitt T. (2019). Investigation of surge-derived pyroclastic flow formation by numerical modeling of the 25 June 1997 dome collapse at Soufrière Hills Volcano, Montserrat. Bulletin of Volcanology vol.81, p.25, – DOI:10.1007/s00445-019-1284-y.
 
+.. _Volcflow Citations:
+
+VolFe
+-------
+VolFe is an open-source framework for calculating melt-vapour equilibria including silicate melt, carbon, hydrogen, sulfur, and noble gases.
+
+**References**:
+
+Hughes, E.C., Liggins, P., Wieser, P. and Stolper, E.M., 2024. VolFe: an open-source Python package for calculating melt-vapor equilibria including silicate melt, carbon, hydrogen, sulfur, and noble gases. https://doi.org/10.31223/X52X3G
 
