@@ -29,18 +29,20 @@ common actions for the hub, such as file I/O and cross-library visualization are
      - IMEX-Lava, Lava2d, pyFLOWGO,	MrLavaLoba, MOLASSES,	VolcFlow, VENUSS
    * - PDCs
      - TITAN2D, IMEX_SfloW2D_V2 
-   * - Ash Dispersal
-     - ASH3D, HAZMAP, HySPLIT, Fall3D
-   * - Tephra dispersal
-     - Tephra2, Fall3D
+   * - Particulate Dispersal
+     - ASH3D, Fall3D, HAZMAP, HySPLIT, PLUME-MoM-TSM, Plumeria_wd, Tephra2
    * - Gas dispersal
-     - DISGAS, HySPLIT, TWODEE
+     - DISGAS, TWODEE
+   * - Petrology
+     - alphaMELTS, Diadfit, MageMIN, pyIRoGlass, pyMELT, Thermombar, VESIcal, VolFe
    * - Lahars
      - LaharZ
    * - Slope Stability
      - Scoops3D
    * - Sulfur/Geochemical Degassing
      - Sulfur_X
+   * - Probabilistic Volcanism
+     - pyBET, pyVOLCANS
    * - Conduit ascent
      - CONFORT
 
@@ -85,7 +87,19 @@ Ash3D is a 3-D Eulerian model to predict airborne volcanic ash concentration and
 This model simulates downwind advection, turbulent diffusion, and settling of ash injected into the atmosphere by a volcanic eruption column. 
 Ash advection is calculated using time-varying pre-existing wind data and a robust, high-order, finite-volume method.
 
-.. note:: A workflow for Ash3D is in progress.
+The workflow for Ash3D is based on the Mount Saint Helens 1980 eruption, and calculates the aggregation of the ash. Other slight variations on the model
+are available through the source code examples and model documentation. It is split into blocks that reflect the final input file's format.
+The user must first enter parameters to specify the source point and overall area of calculations. They are also asked to provide input and output file names.
+The next cell requests the user to input the total number of pulses, and temporal data, as well as spacial data (plume height, eruption mass) for each event.
+Ash3D is very flexible with the format of its wind data ingestion. The VICTOR team provides, and recommends, a netCDF file as a standard for
+complex data such as this. Following this, a handful of variables relating to grain size are required to allow for proper calculations of the deposition.
+
+The next three cells are concerned only with outputs. Users will specify if they want ASCII or KMZ files for a variety of
+values, including thickness, concentration, arrival times, and more. Users can also specify specific times to output such files.
+Finally, the user can pick ash arrival times for specific airports or points of interest. 
+
+Subsequently, the input files will be properly formatted, and the model can run! Once complete, users have a choice
+of what to display, plotted through the victor.py library.
 
 **References:**
 
@@ -101,7 +115,7 @@ Confort is an updated version of Conflow, an open-source numerical model for flo
 Confort's improvements include more accurate rheological parameters and equations, evaluations of crystal-bearing rheology,
 additions of crystal and vesicle size distribution, and integration of degassing in both equilibrium and disequilibrium conditions.
 
-The example workflow is minimal and should be fairly easy to follow. After importing the necessary libraries,
+The example workflow aims to be minimal. After importing the necessary libraries,
 The first cell contains all input parameters, ranging from the pressure at the beginning and ends of the model to the weight percent
 of various chemical compounds and particles. The following two cells can be run without input. Following these, please
 thoroughly read the markdown cell, and select 7 outputs from the list of 27. Input those numbers into the next cell in a list.
@@ -111,6 +125,20 @@ but the most gracefully formatted file will always be ``Conflow.csv``, output to
 **References:**
 
 Silvia Campagnola; Claudia Romano; Larry G Mastin; Alessandro Vona (2016), "Confort 15 (Conflow improvement)," https://theghub.org/resources/3743.
+
+.. _Diadfit Citations:
+
+Diadfit
+--------
+
+DiadFit is a python tool for fitting Raman data, particularly focused around applications to melt and fluid inclusions.
+
+.. note:: A workflow for Diadfit is in progress.
+
+
+**References**
+
+Wieser, P. E., & DeVitre, C. (2024). DiadFit: An open-source Python3 tool for peak fitting of Raman data from silicate melts and CO2 fluids. Volcanica, 7(1), 335–359. https://doi.org/10.30909/vol.07.01.335359
 
 .. _Disgas Citations:
 
@@ -244,9 +272,9 @@ containing time series data for the temperature and depth are both supplied as o
 
 Elisa Biaioli's thesis: https://dx.doi.org/10.15167/biagioli-elisa_phd2021-10-27
 
-E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow water model for viscous fluids and positivity preserving numerical approximation. Applied Mathematical Modeling, 94:482–505, 2021. doi: 10.1016/j.apm.2020.12.036. https://www.sciencedirect.com/science/article/pii/S0307904X21000019
+\E. Biagioli, M. de’ Michieli Vitturi, and F. Di Benedetto. Modified shallow water model for viscous fluids and positivity preserving numerical approximation. Applied Mathematical Modeling, 94:482–505, 2021. doi: 10.1016/j.apm.2020.12.036. https://www.sciencedirect.com/science/article/pii/S0307904X21000019
 
-M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019. https://gmd.copernicus.org/articles/12/581/2019/
+\M. de’ Michieli Vitturi, T. Esposti Ongaro, G. Lari, and A. Aravena. IMEX_SfloW2D 1.0. a depth-averaged numerical flow model for pyroclastic avalanches. Geosci. Model Dev., 12: 581–595, 2019. doi: 10.5194/gmd-12-581-2019. https://gmd.copernicus.org/articles/12/581/2019/
 
 .. _Laharz Citations:
 
@@ -295,9 +323,27 @@ The rest of the model can be run without further input and will result in a simp
 
 **References:**
 
- Hyman, D. M. R., Dietterich, H. R., & Patrick, M. R. (2022). Toward next-generation lava flow forecasting: Development of a fast, physics-based lava propagation model. Journal of Geophysical Research: Solid Earth, 127, e2022JB024998. https://doi.org/10.1029/2022JB024998 
+Hyman, D. M. R., Dietterich, H. R., & Patrick, M. R. (2022). Toward next-generation lava flow forecasting: Development of a fast, physics-based lava propagation model. Journal of Geophysical Research: Solid Earth, 127, e2022JB024998. https://doi.org/10.1029/2022JB024998 
 
-.. _Magmaxiysm Citations:
+.. _MageMIN Citations:
+
+MageMIN
+-----------
+MAGEMin is a Gibbs energy minimization solver package, which computes the thermodynamically most stable assemblage for a given bulk rock composition and pressure/temperature condition. It also returns parameters such as
+melt fraction or density, which can be combined with geodynamic/petrological tools to simulate, for example, the evolving chemistry of a crystallising melt.
+
+MAGEMin is written as a parallel C library and uses a combination of linear programming, the extended Partitioning Gibbs free Energy approach and gradient-based local minimization to compute the most stable mineral assemblage.
+In this, it differs from existing approaches which makes it particularly suitable to utilize modern multicore processors.
+
+MageMIN is most accessible through its Julia application. Thus, we recommend using VICTOR's virtual desktop, and running the `MAGEMin` command from a terminal there.
+Once that is complete, open a browser tab and enter the URL the script displays. Additional information is available here_.
+
+.. _here: https://github.com/ComputationalThermodynamics/MAGEMinApp.jl
+
+**References:**
+
+Riel N., Kaus B.J.P., Green E.C.R., Berlie N., (2022) MAGEMin, an Efficient Gibbs Energy Minimizer: Application to Igneous Systems.
+Geochemistry, Geophysics, Geosystems 23, e2022GC010427 https://doi.org/10.1029/2022GC010427
 
 Magmaxiysm
 -----------
@@ -312,13 +358,11 @@ Journal of Geophysical Research: Solid Earth, 127(9). https://doi.org/10.1029/20
 
 .. _MAMMA Citations:
 
-
 MAMMA
 ------------
 MAMMA is a FORTRAN90 code designed to solved a conservative model for magma ascent in a volcanic conduit, described as a compressible two-phase flow
 by finite volume methods. The governing multiphase equations for two-phase compressible flow are derived using the theory of thermodynamically compatible systems (Romenski et al., 2010).
 The model is one-dimensional with different phase velocities and pressures but a single temperature for the two phases. The finite volume solver is based on a semidiscrete central scheme and it is not tied on the specific eigenstructure of the model.
-
 
 **References:**
 
@@ -376,7 +420,7 @@ and modeling equilibrium phase fractionation and reactive transport.
 
 **References:**
 
- Connolly JAD (2005) Computation of phase equilibria by linear programming: A tool for geodynamic modeling and its application to subduction zone decarbonation. Earth and Planetary Science Letters 236:524-541. (Errata)
+  Connolly JAD (2005) Computation of phase equilibria by linear programming: A tool for geodynamic modeling and its application to subduction zone decarbonation. Earth and Planetary Science Letters 236:524-541. (Errata)
 
 Connolly JAD (2009) The geodynamic equation of state: what and how. Geochemistry, Geophysics, Geosystems 10:Q10014 DOI:10.1029/2009GC002540.
 
@@ -388,11 +432,8 @@ Connolly JAD, Galvez ME (2018) Electrolytic fluid speciation by Gibbs energy min
 PLUME-MoM-TSM
 ------------
 PLUME-MoM-TSM is a FORTRAN90 code designed to solve the equations for a steady-state integral volcanic plume model, describing the rise in the atmosphere of a mixture of gas and volcanic ash during an eruption.
-
 The model describes the steady-state dynamics of a plume in a 3-D coordinate system, and the two-size moment (TSM) method is adopted to describe changes in grain-size distribution along the plume associated with particle loss from plume margins and with particle aggregation. For this reason, the new version is named PLUME-MoM-TSM.
-
 For the first time in a plume model, the full Smoluchowski coagulation equation is solved, allowing to quantify the formation of aggregates during the rise of the plume. In addition, PLUME-MOM-TSM allows to model the phase change of water, which can be either magmatic, added at the vent as liquid from external sources, or incorporated through ingestion of moist atmospheric air.
-
 Finally, the code includes the possibility to simulate the initial spreading of the umbrella cloud intruding from the volcanic column into the atmosphere. A transient shallow water system of equations models the intrusive gravity current, allowing to compute the upwind spreading.
 
 .. note:: A workflow for PLUME-MoM-TSM has not been created yet.
@@ -409,17 +450,39 @@ Plumeria is a one-dimensional model for wind-driven volcanic plumes.
 It was originally written in 2007 in Visual Basic to analyze plumes during the 2004-2008 eruption of Mount St. Helens (Mastin, 2007).  
 The version in this folder, Plumeria_wd, has been modified for crosswinds, translated to Fortran, and tested by comparing predicted with observed plume heights from multiple eruptions (Mastin, 2014). 
 It was compared with other 1D and 3D plume models 2016 (Costa et al., 2016).  
-It has been used in several published studies to estimate mass eruption rate from plume height (e.g., Mastin et al., 2013; Mastin et al., in press), to assess when condensation and freezing may occur in plumes,
- and their association with lightning (e.g., Van Eaton et al., 2016, 2019, Smith et al., 2023), and to compare the path of bent plumes in laboratory studies (McNeal et al., 2019).
+It has been used in several published studies to estimate mass eruption rate from plume height (e.g., Mastin et al., 2013; Mastin et al., in press), to assess when condensation and freezing may occur in plumes
+and their association with lightning (e.g., Van Eaton et al., 2016, 2019, Smith et al., 2023), and to compare the path of bent plumes in laboratory studies (McNeal et al., 2019).
 
-.. note:: A workflow for Plumeria_wd has not been created yet.
+Plumeria's workflow starts by requesting a name for the output file, as well as querying if the user wants to add an atmopsheric data file. The VICTOR team recommends using one for best accuracy 
+and ease of use. If not included, the model requires tropospheric properties. The next code cell requests vent properties, as well as the mass fraction/temperature of water. Finally,
+the magma temperature and other physical properties must be entered. As a 1-D model, there is now enough information to properly
+compute the plume distribution.
+
+The model can now be run, and the data is subsequently processed and neatly output to a CSV file. The user can now choose which data they want to visualize.
 
 **References:**
 
 Mastin, L.G., 2024, plumeria_wd software.  U.S. Geological Survey software program.  https://doi.org/10.5066/P1HVRKVN
 
-.. _pyFLOWGO Citations:
+.. _pyBET Citations:
 
+pyBET-evo
+------
+
+The goal of pyBET-evo is to provide the user with software capable of evaluating the probability that the mechanism
+underlying the unrest of a volcano is a shallow magma movement and the probability of eruption as a function of
+monitoring anomalies at different time-steps.
+
+The pyBET-evo workflow requires only 4 parameters - if there is unrest or not, which will calculate for short or long term probabilities respectively,
+the total number of samples, the time window, and the percentiles that should be output. The final results are saved to an Excel file.
+
+**References**
+
+Ferrara, S., Selva, J., Sandri, L., Marzocchi, W., Elicitation VI Working Group (2025) “Forecasting the evolution
+of the current unrest of Campi Flegrei by defining anomalies through experts’ elicitation”, Annals of
+Geophysics, 68.
+
+.. _pyFLOWGO Citations:
 
 pyFLOWGO
 -----------
@@ -431,7 +494,7 @@ of a control volume flowing down a channel depends on rheological properties com
 crystallization path estimated via a heat balance box model. pyFLOWGO is an updated version written completely in Python
 for increased flexibility and modernity.
 
-The first input cell directly follows the imports, simply asking for the name of the flow, the slope file, which is *not* a DEM,
+The first input cell directly follows the imports, asking for the name of the flow, the slope file, which is *not* a DEM,
 and the step size. The next cell requests flags to calculate a specific type of flux. Following this, the user must pick the method used
 for calculating various aspects of the lava's physical properties. Next, the physical dimensions of the channel should be entered.
 The final two cells specify eruption event parameters and thermal parameters. All subsequent cells can be run without further alteration.
@@ -442,28 +505,69 @@ In this case, the visualizations are done through a Python script included in th
 Chevrel, M., Labroquere, J., Harris, A., and Rowland, S. (2017). Pyflowgo: an open-source platform for simulation of
 channelized lava thermo-rheological properties. Computational Geosciences. https://ui.adsabs.harvard.edu/abs/2018CG....111..167C/abstract
 
+.. _pyIRoGlass Citations:
+
+pyIRoGlass
+-----------
+
+PyIRoGlass is a Bayesian MCMC-founded Python algorithm, written in the open-source language Python3, for determining $H2O$ and $CO2$
+species concentrations in the transmission FTIR spectra of basaltic to andesitic glasses. We leverage a database of naturally degassed melt inclusions
+and back-arc basin basalts to delineate the fundamental shape and variability of the baseline underlying the CO 3 2 − and H 2 O m , 1635 peaks, in the mid-infrared region. 
+PyIRoGlass employs Bayesian inference and Markov Chain Monte Carlo sampling to fit all probable baselines and peaks, solving for best-fit parameters and capturing covariance to offer robust uncertainty estimates.
+
+**References:**
+
+Shi, S., Towbin, W. H., Plank, T., Barth, A., Rasmussen, D., Moussallam, Y., Lee, H. J. and Menke, W. (2024) “PyIRoGlass: An open-source, Bayesian MCMC algorithm for fitting baselines to FTIR spectra of basaltic-andesitic glasses”,
+Volcanica, 7(2), pp. 471–501. doi: 10.30909/vol.07.02.471501.
+
+.. _pyMELT Citations:
+
+pyMELT
+-----------
+
+pyMelt is a python library for calculating the melting behaviour of mantle comprising multiple lithologies. The pyMelt library implements 
+the melting equations developed by Phipps Morgan (2001), alongside many existing lherzolite and pyroxenite melting parameterisations.
+
+**References:**
+
+Matthews, S., Wong, K., Shorttle, O., Edmonds, M., & Maclennan, J. (2021). Do olivine crystallization temperatures faithfully record mantle temperature variability?. Geochemistry, Geophysics, Geosystems, 22(4), e2020GC009157. https://doi.org/10.1029/2020GC009157
+
+pyVOLCANS
+-----------
+
+Python package to flexibly explore similarities and differences between volcanic systems.
+
+The main goal of PyVOLCANS is to help alleviate data-scarcity issues in volcanology, and contribute to developments in a range of topics,
+including (but not limited to): quantitative volcanic hazard assessment at local to global scales, investigation of magmatic and volcanic processes, a
+nd even teaching and scientific outreach. 
+
+**References:**
+
+Tierz, P., Loughlin, S.C. & Calder, E.S. VOLCANS: an objective,
+structured and reproducible method for identifying sets of analogue volcanoes. Bull Volcanol 81, 76 (2019). https://doi.org/10.1007/s00445-019-1336-3
+
 .. _Scoops3D Citations:
 
 Scoops3D
 -----------
 
 Scoops3D evaluates slope stability throughout a digital landscape represented by a digital elevation
- model (DEM). The program uses a three-dimensional (3D) method of columns limit-equilibrium analysis
- to assess the stability of many potential landslides (typically millions) within a user-defined 
- size range. For each potential landslide, Scoops3D assesses the stability of a rotational, spherical
+model (DEM). The program uses a three-dimensional (3D) method of columns limit-equilibrium analysis
+to assess the stability of many potential landslides (typically millions) within a user-defined 
+size range. For each potential landslide, Scoops3D assesses the stability of a rotational, spherical
 slip surface encompassing many DEM cells. It provides the least-stable potential landslide for each DEM
- cell in the landscape, as well the associated volumes and (or) areas.
+cell in the landscape, as well the associated volumes and (or) areas.
 
- The associated workflow provides a compartmentalized way to test landslide scenarios. Cells initially ask the user
- for descriptive information and input/output folders. Continuing on, a groundwater pressure and material properties
- are a vital required input. Continuing on, the user must enter an earthquake loading coefficient as a fraction of gravity.
- Next, the method for computing the factor of safety is specified. The subsequent three cells are used to specify the search area,
- which is a 3D domain. These parameters include DEM x, y, and z boundaries, as well as upper and lower
- limits for surface failure. Finally, a handful of flags may be set to generate additional outputs
- for the convenience of the modeler. Further cells can be run without additional input, though the visualized output can be changed
- between the primary outputs.
+The associated workflow provides a compartmentalized way to test landslide scenarios. Cells initially ask the user
+for descriptive information and input/output folders. Continuing on, a groundwater pressure and material properties
+are a vital required input. Continuing on, the user must enter an earthquake loading coefficient as a fraction of gravity.
+Next, the method for computing the factor of safety is specified. The subsequent three cells are used to specify the search area,
+which is a 3D domain. These parameters include DEM x, y, and z boundaries, as well as upper and lower
+limits for surface failure. Finally, a handful of flags may be set to generate additional outputs
+for the convenience of the modeler. Further cells can be run without additional input, though the visualized output can be changed
+between the primary outputs.
 
- For additional context and a more detailed manual, please `refer to this document <https://pubs.usgs.gov/tm/14/a01/pdf/tm14-a1.pdf>`_ 
+For additional context and a more detailed manual, please `refer to this document <https://pubs.usgs.gov/tm/14/a01/pdf/tm14-a1.pdf>`_ 
 
 **References:**
 
@@ -554,7 +658,7 @@ Next, the user must input spacing values and UTM values for the topography. If a
 though if not, a generalized slope is required from user entered values. The following two cells require
 numerical terms, including the densities of the two gasses being compared and many environmental and entrainment coefficients as well as physical constants.
 Subsequently, the user is asked to enter some location data for the meteorology, or more aptly the wind.
-The second to last configuration cell simply asks the user to enter paths to various files, depending on the mode the user chose.
+The second to last configuration cell asks the user to enter paths to various files, depending on the mode the user chose.
 If not required, the cell can be left blank or as-is from the template. Finally, output parameters can be withheld or added as needed,
 allowing for highly flexible output files. 
 
