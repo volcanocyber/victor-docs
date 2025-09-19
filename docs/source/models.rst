@@ -557,6 +557,9 @@ the program can calculate, for example, the proportion, or percentage, of volcan
 Tierz, P., Loughlin, S.C. & Calder, E.S. VOLCANS: an objective,
 structured and reproducible method for identifying sets of analogue volcanoes. Bull Volcanol 81, 76 (2019). https://doi.org/10.1007/s00445-019-1336-3
 
+Tierz, P., Christodoulou, V., Stevenson, J.A., Loughlin, S.C. (2021). PyVOLCANS: A Python package to flexibly
+explore similarities and differences between volcanic systems. Journal of Open Source Software, 6(68), 3649. https://doi.org/10.21105/joss.03649
+
 .. _Scoops3D Citations:
 
 Scoops3D
