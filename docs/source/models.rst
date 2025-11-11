@@ -34,17 +34,19 @@ common actions for the hub, such as file I/O and cross-library visualization are
    * - Gas dispersal
      - DISGAS, TWODEE
    * - Petrology
-     - alphaMELTS, Diadfit, MageMIN, pyIRoGlass, pyMELT, Thermombar, VESIcal, VolFe
+     - alphaMELTS, Diadfit, MageMIN, pyIRoGlass, pyMELT, Thermombar
    * - Lahars
      - LaharZ
    * - Slope Stability
      - Scoops3D
    * - Sulfur/Geochemical Degassing
-     - Sulfur_X
+     - Sulfur_X, VolFe, VESIcal
    * - Probabilistic Volcanism
      - pyBET, pyVOLCANS
    * - Conduit ascent
-     - CONFORT
+     - CONFORT, MAMMA
+   * - Magma chamber dynamics
+     - Magmaxiysm (NGSolve), 
 
 
 Utilizing Workflows
