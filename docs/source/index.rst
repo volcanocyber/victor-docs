@@ -21,5 +21,5 @@ Contents
 
    usage
    models
-   victor.py
+   pyVICTOR
    remotesensing

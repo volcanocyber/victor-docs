@@ -4,9 +4,9 @@ Models
 Models Overview
 ----------------
 
-VICTOR supports a wide array of both numerical and probabalistic models
-on its systems. Execution of the models can be done directly from the command line
-through the command line, though we recommend running everything through Jupyter Notebooks.
+VICTOR supports a wide array of both numerical and probabilistic models
+on its systems. Execution of the models can be done directly from the command line,
+though we recommend running everything through Jupyter Notebooks.
 
 Each notebook is built uniquely for the model, though as many aspects
 as possible are generalized. Most often, this results in significantly
@@ -16,7 +16,7 @@ different libraries and input formats. Visualizations and data parsing, however,
 the *rasterio*, *matplotlib*, and *xarray* libraries, though others are available for your convenience. Additionally,
 common actions for the hub, such as file I/O and cross-library visualization are referenced in the *VICTOR* module.
 
-.. note:: Due to the varied languages and file requirements, additional files neccesary for the models may be included in
+.. note:: Due to the varied languages and file requirements, additional files necessary for the models may be included in
     the generated folders. Intended output files will be clearly specified by both the workflow and documentation.
 
 .. list-table:: Currently available models (Please reach out if interested in other tools not currently listed)
@@ -32,15 +32,17 @@ common actions for the hub, such as file I/O and cross-library visualization are
    * - Particulate Dispersal
      - ASH3D, Fall3D, HAZMAP, HySPLIT, PLUME-MoM-TSM, Plumeria_wd, Tephra2
    * - Gas dispersal
-     - DISGAS, TWODEE
+     - DISGAS, TWODEE, DIAGNO
    * - Petrology
-     - alphaMELTS, Diadfit, MageMIN, pyIRoGlass, pyMELT, Thermombar
+     - alphaMELTS, Diadfit, MageMIN, pyIRoGlass, pyMELT, Thermombar, VESIcal, VolFe
+   * - Sulfur/Geochemical Degassing
+     - Sulfur_X, EVo
    * - Lahars
-     - LaharZ
+     - LaharZ, Grfin Tools
    * - Slope Stability
      - Scoops3D
-   * - Sulfur/Geochemical Degassing
-     - Sulfur_X, VolFe, VESIcal
+   * - Geodetic Deformation
+     - dMODELS
    * - Probabilistic Volcanism
      - pyBET, pyVOLCANS
    * - Conduit ascent
@@ -58,8 +60,8 @@ maximum user experience. All outputs will be in either ascii shapefile, csv, or 
 on the model, for compatibility's sake. 
 
 VICTOR offers three sets of options for visualization. The first is through any of the dozen libraries included in
-the built-in conda environment. Second is the custom library ``victor.py`` for sharp and accurate
-plotting through a handful of reuable functions. For the most versastile work, a virtual desktop with
+the built-in conda environment. Second is the custom library ``pyVICTOR`` for sharp and accurate
+plotting through a handful of reusable functions. For the most versatile work, a virtual desktop with
 QGIS resides for a fully featured experience.
 
 .. _alphaMELTS Citations:
@@ -101,7 +103,7 @@ values, including thickness, concentration, arrival times, and more. Users can a
 Finally, the user can pick ash arrival times for specific airports or points of interest. 
 
 Subsequently, the input files will be properly formatted, and the model can run! Once complete, users have a choice
-of what to display, plotted through the victor.py library.
+of what to display, plotted through the pyVICTOR library.
 
 **References:**
 
@@ -168,6 +170,19 @@ and can then run the following cell to output a set of plots over the timespan.
 Granieri D., Costa A., Macedonio G., Chiodini G., Bisson M. (2013) Carbon dioxide in the city of Naples: contribution and effects of the volcanic source, J. Volcanol. Geotherm. Res., Vol. 260: 52-61, doi: 10.1016/j.jvolgeores.2013.05.003 https://www.sciencedirect.com/science/article/pii/S0377027313001443
 
 Costa A., Macedonio G. (2016) DISGAS: A model for passive DISpersion of GAS, Rapporti tecnici INGV, N. 332, Istituto Nazionale Di Geofisica e Vulcanologia, Italy http://datasim.ov.ingv.it/download/disgas/manual-disgas-2.0.pdf
+
+.. _DIAGNO Citations:
+
+DIAGNO
+-------
+DIAGNO is a diagnostic wind model developed by INGV-Osservatorio Vesuviano to support atmospheric transport and dispersion studies.
+It is distributed with source code, a user manual, and examples, and requires a Fortran compiler to build and run.
+
+.. note:: A workflow for DIAGNO is in progress.
+
+**References**
+
+INGV Osservatorio Vesuviano, DIAGNO Diagnostic Wind Model, http://datasim.ov.ingv.it/models/diagno.html
 
 Fall3D
 --------
@@ -311,6 +326,19 @@ Widiwijayanti, C., Voight, B., Hidayat, D. et al. Objective rapid delineation of
 
 Widiwijayanti, C., 2018, LaharZ: an open-source tool for the modeling of surface flows and hazards. Geosci. Model Dev., 9: 1–17, 2018. doi: 10.5194/gmd-9-1-2018. https://gmd.copernicus.org/articles/9/1/2018
 
+.. _Grfin_Citations:
+
+Grfin Tools
+-----------
+Grfin Tools enables runout and inundation modeling for landslides, debris flows, and other mass-movement hazards.
+It uses projected DEMs, YAML configuration files, TauDEM-derived hydrologic products, and growth-based volume estimation to delineate inundation extents.
+
+.. note:: A workflow for Grfin Tools is in progress.
+
+**References:**
+
+Cronkite-Ratcliff, C., Reid, M.E., Brien, D.L., and Perkins, J.P. (2025) Grfin Tools - Software package and runtime documentation for users, version 1.0, U.S. Geological Survey Software Release. https://code.usgs.gov/grfintools/grfintools
+
 .. _Lava2d Citations:
 
 Lava2d uses a 2D depth-averaged finite volume framework to solve the propagation of a rheologically variable shallow viscoplastic gravity current flowing across natural terrain. The model does not average the thermal or rheological information over the flow depth, maintaining fidelity to the strong thermal stratification 
@@ -427,6 +455,18 @@ and modeling equilibrium phase fractionation and reactive transport.
 Connolly JAD (2009) The geodynamic equation of state: what and how. Geochemistry, Geophysics, Geosystems 10:Q10014 DOI:10.1029/2009GC002540.
 
 Connolly JAD, Galvez ME (2018) Electrolytic fluid speciation by Gibbs energy minimization and implications for subduction zone mass transfer. Earth and Planetary Science Letters 501:90-102 doi:10.1016/ j.epsl.2018.08.024
+
+.. _dMODELS Citations:
+
+dMODELS
+--------
+dMODELS is a MATLAB software package for modeling crustal deformation near active faults and volcanic centers.
+It supports geodetic deformation analysis and monitoring of volcanic systems using crustal displacement and strain data.
+
+dMODELS currently requires a MATLAB license to use on VICTOR, and cna be run through either the terminal or virtual desktop.
+**References:**
+
+Battaglia, M., Cervelli, P.F., and Murray, J.R. (2013) dMODELS: A MATLAB software package for modeling crustal deformation near active faults and volcanic centers. Journal of Volcanology and Geothermal Research 252, 162-169. https://doi.org/10.1016/j.jvolgeores.2012.12.018
 
 
 .. _PLUME-MoM-TSM Citations:
@@ -607,6 +647,19 @@ the user can toggle Monte Carlo runs for error estimation, and set the melt frac
 sulfide, the tolerance of FO2, and the water-melt fraction relation in the case of crysytallization.
 
 The model creates graphs to present the output, which the workflow embeds as images for the user to analyze and save.
+
+.. _EVo Citations:
+
+EVo
+----
+EVo calculates the speciation and volume of a volcanic gas phase erupting in equilibrium with its parent magma.
+It supports single-pressure and decompression runs for OH, COH, SOH, COHS, and COHSN systems, and outputs gas phase speciation, melt volatile contents, melt density, and fO2.
+
+.. note:: A workflow for EVo is in progress.
+
+**References:**
+
+pipliggins. EVo: Thermodynamic magma degassing model. https://github.com/pipliggins/EVo
 
 
 **References:**
