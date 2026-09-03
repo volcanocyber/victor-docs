@@ -21,5 +21,6 @@ Contents
 
    usage
    models
+   integrative
    pyVICTOR
    remotesensing
